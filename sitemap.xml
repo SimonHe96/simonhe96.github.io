@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.simon96.online/about/index.html</loc>
+    
+    <lastmod>2018-10-01T12:24:39.313Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.simon96.online/2018/09/30/Typora-tutorial-English-edition/</loc>
     
     <lastmod>2018-10-01T11:57:44.078Z</lastmod>
@@ -16,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://www.simon96.online/2018/09/25/my-new-post/</loc>
-    
-    <lastmod>2018-10-01T11:26:15.586Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.simon96.online/categories/index.html</loc>
     
     <lastmod>2018-09-28T12:08:31.793Z</lastmod>
@@ -33,13 +33,6 @@
     <loc>https://www.simon96.online/404/index.html</loc>
     
     <lastmod>2018-09-28T10:47:45.137Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.simon96.online/about/index.html</loc>
-    
-    <lastmod>2018-09-28T10:38:05.018Z</lastmod>
     
   </url>
   
