@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="遇见西门">
 <meta property="og:description" content="前言 欢迎您在文末留言，一起讨论。 本文采用 CC BY-NC-SA 4.0 许可协议，转载请注明出处！  Hexo博客搭建准备环境 Node.js 下载并安装。  Git 下载并安装。  安装Hexo，在命令行输入以下命令即可：  npm install -g hexo-cli   初始化Hexo，在命令行依次输入以下命令即可： 其中为：存放Hexo初始化文件的路径。 123$ hexo ini">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-13T04:18:15.698Z">
+<meta property="og:updated_time" content="2018-10-13T06:02:54.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置">
 <meta name="twitter:description" content="前言 欢迎您在文末留言，一起讨论。 本文采用 CC BY-NC-SA 4.0 许可协议，转载请注明出处！  Hexo博客搭建准备环境 Node.js 下载并安装。  Git 下载并安装。  安装Hexo，在命令行输入以下命令即可：  npm install -g hexo-cli   初始化Hexo，在命令行依次输入以下命令即可： 其中为：存放Hexo初始化文件的路径。 123$ hexo ini">
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  1.7k
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  6
                 </span>
               
             </div>
@@ -597,12 +597,49 @@
 </tr>
 <tr>
 <td>Disqus</td>
-<td>2</td>
-<td>简洁</td>
+<td>1</td>
+<td></td>
 <td>需要翻*墙</td>
 </tr>
 </tbody>
 </table>
+<ol>
+<li><p>Valine</p>
+<p>1.1. 获取APP ID 和 APP Key</p>
+<p>请先登录或注册 <a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>, 进入控制台后点击左下角创建应用，</p>
+<p>进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
+<p>1.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
+<p>1.3. 运行<code>hexo g&amp;&amp;hexo d</code>推送到博客。</p>
+</li>
+<li><p>来必力/livere</p>
+<p>2.1. 登陆 <a href="https://livere.com/" target="_blank" rel="noopener">来必力</a> 获取你的 LiveRe UID。</p>
+<p>2.2. 填写LiveRe UID到主题配置文件<code>_config.yml</code></p>
+</li>
+<li><p>畅言</p>
+<p>3.1.获取APP ID 和 APP Key</p>
+<p>请先登录或注册 <a href="http://changyan.kuaizhan.com/" target="_blank" rel="noopener">畅言</a>, 点击“立即免费获取畅言”，</p>
+<p>新建站点，点击管理，点击评论插件&gt;评论管理，</p>
+<p>点击后台总览，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
+<p>3.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
+<p>3.3. 运行<code>hexo g&amp;&amp;hexo d</code>推送到博客。</p>
+</li>
+<li><p>gitment</p>
+<p>4.1. 安装插件：</p>
+<blockquote>
+<p>npm i –save gitment</p>
+</blockquote>
+<p>4.2. 申请应用</p>
+<p>在<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">New OAuth App</a>为你的博客应用一个密钥:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Application <span class="string">name:</span>随便写</span><br><span class="line">Homepage <span class="string">URL:</span>这个也可以随意写,就写你的博客地址就行</span><br><span class="line">Application <span class="string">description:</span>描述,也可以随意写</span><br><span class="line">Authorization callback <span class="string">URL:</span>这个必须写你的博客地址</span><br></pre></td></tr></table></figure>
+<p>4.3. 配置</p>
+<p>编辑主题配置文件<code>themes/*/_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Gitment</span></span><br><span class="line"><span class="comment"># Introduction: https://imsun.net/posts/gitment-introduction/</span></span><br><span class="line"><span class="attr">gitment:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  mint:</span> <span class="literal">true</span> <span class="comment"># RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span> <span class="comment"># Show comments count in post meta area</span></span><br><span class="line"><span class="attr">  lazy:</span> <span class="literal">false</span> <span class="comment"># Comments lazy loading with a button</span></span><br><span class="line"><span class="attr">  cleanly:</span> <span class="literal">false</span> <span class="comment"># Hide 'Powered by ...' on footer, and more</span></span><br><span class="line"><span class="attr">  language:</span> <span class="comment"># Force language, or auto switch by theme</span></span><br><span class="line"><span class="attr">  github_user:</span> <span class="string">&#123;you</span> <span class="string">github</span> <span class="string">user</span> <span class="string">id&#125;</span></span><br><span class="line"><span class="attr">  github_repo:</span> <span class="string">公开的git仓库,评论会作为那个项目的issue</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">&#123;刚才申请的ClientID&#125;</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">&#123;刚才申请的Client</span> <span class="string">Secret&#125;</span></span><br><span class="line"><span class="attr">  proxy_gateway:</span> <span class="comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line"><span class="attr">  redirect_protocol:</span> <span class="comment"># Protocol of redirect_uri with force_redirect_pro</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Disqus</p>
+<p>编辑 主题配置文件<code>_config.yml</code>， 将 disqus 下的 enable 设定为 true，同时提供您的 shortname。count 用于指定是否显示评论数量。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  shortname:</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h4 id="数据统计与分析"><a href="#数据统计与分析" class="headerlink" title="数据统计与分析"></a>数据统计与分析</h4><table>
 <thead>
 <tr>
@@ -643,21 +680,16 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="http://share.baidu.com/" target="_blank" rel="noopener">百度分享</a></td>
+<td>4</td>
+<td>稳定</td>
+<td>不太美观</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
+<td><a href="https://github.com/revir/need-more-share2" target="_blank" rel="noopener">need-more-share2</a></td>
+<td>4</td>
+<td>美观</td>
+<td>更新不及时（比如微信分享API）</td>
 </tr>
 </tbody>
 </table>
@@ -672,21 +704,22 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
+<td>Local Search</td>
+<td>4</td>
+<td>配置方便</td>
 <td></td>
 </tr>
 <tr>
+<td>Swiftype</td>
+<td>2</td>
 <td></td>
+<td>需注册</td>
+</tr>
+<tr>
+<td>Algolia</td>
+<td>2</td>
 <td></td>
-<td></td>
+<td>需注册</td>
 </tr>
 </tbody>
 </table>
@@ -1634,7 +1667,7 @@
       
           pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Pinterest,Facebook,GooglePlus,Reddit,Linkedin,Tumblr,Evernote";
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin,Evernote";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
