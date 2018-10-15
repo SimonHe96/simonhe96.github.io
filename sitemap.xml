@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.simon96.online/404.html</loc>
+    
+    <lastmod>2018-10-15T05:32:04.313Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.simon96.online/2018/10/12/hexo-tutorial/</loc>
     
     <lastmod>2018-10-14T09:41:25.386Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://www.simon96.online/categories/index.html</loc>
     
     <lastmod>2018-09-28T12:08:31.793Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.simon96.online/404/404.html</loc>
-    
-    <lastmod>2018-09-28T10:47:45.137Z</lastmod>
     
   </url>
   
