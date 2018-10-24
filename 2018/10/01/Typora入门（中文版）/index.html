@@ -110,9 +110,9 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
-    tabs: true,
+    tabs: false,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
@@ -530,7 +530,7 @@
 <p>这是一个[参考链接]<a href="http://example.com/" title="标题" target="_blank" rel="noopener">id</a>。<br>[id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>  “标题”</p>
 </blockquote>
 <p>这是一个<a href="http://example.com/" title="标题" target="_blank" rel="noopener">参考链接</a>。</p>
-<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。输入\<a href="mailto:&#116;&#x64;&#95;&#115;&#105;&#109;&#x6f;&#110;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#116;&#x64;&#95;&#115;&#105;&#109;&#x6f;&#110;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a> 即 <a href="mailto:&#116;&#x64;&#95;&#115;&#x69;&#x6d;&#111;&#110;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#116;&#x64;&#95;&#115;&#x69;&#x6d;&#111;&#110;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a>。<br>Typora还会自动链接标准网址。例如：<a href="http://www.simon96.online。" target="_blank" rel="noopener">www.simon96.online。</a></p>
+<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。输入\<a href="mailto:&#x74;&#x64;&#x5f;&#115;&#x69;&#109;&#111;&#x6e;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x74;&#x64;&#x5f;&#115;&#x69;&#109;&#111;&#x6e;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a> 即 <a href="mailto:&#116;&#100;&#95;&#115;&#x69;&#109;&#111;&#x6e;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#116;&#100;&#95;&#115;&#x69;&#109;&#111;&#x6e;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a>。<br>Typora还会自动链接标准网址。例如：<a href="http://www.simon96.online。" target="_blank" rel="noopener">www.simon96.online。</a></p>
 <h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><blockquote>
 <p>![显示的文字](/path/to/img.jpg)<br>![显示的文字](/path/to/img.jpg “图片标题”)</p>
 </blockquote>
@@ -811,15 +811,27 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
+                    <a href="https://weibo.com/HE752267091" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
                     <a href="https://github.com/SimonHe96" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:tdsimon96@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:tdsimon96@gmail.com" target="_blank" title="邮箱">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-envelope"></i>邮箱</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/simonhe96/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-external-link-alt"></i>知乎</a>
                   </span>
                 
             </div>
@@ -868,6 +880,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -929,11 +948,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1558,6 +1572,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 
