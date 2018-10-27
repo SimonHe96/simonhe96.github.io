@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="遇见西门">
 <meta property="og:description" content="Python2简明笔记，中文，免费，零起点，完整示例。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-26T06:52:21.999Z">
+<meta property="og:updated_time" content="2018-10-27T04:30:13.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python2简明笔记">
 <meta name="twitter:description" content="Python2简明笔记，中文，免费，零起点，完整示例。">
@@ -368,8 +368,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-26T14:52:21+08:00">
-                2018-10-26
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-27T12:30:13+08:00">
+                2018-10-27
               </time>
             
           </span>
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  782
+                  1.5k
                 </span>
               
 
@@ -445,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  6
                 </span>
               
             </div>
@@ -478,7 +478,7 @@
 <li><p>Python 解释器本身几乎可以在所有的操作系统中运行。</p>
 </li>
 </ul>
-<h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4><ul>
+<h3 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h3><ul>
 <li><p>py</p>
 <p>源文件， 由python.exe 解释</p>
 </li>
@@ -492,7 +492,7 @@
 <p>PYD实质上还是dll文件，只是改了后缀为PYD，可以被python调用。<br>DLL文件即动态链接库文件，是一种可执行文件，它允许程序共享执行特殊任务所必需的代码和其他资源。</p>
 </li>
 </ul>
-<h4 id="解释器"><a href="#解释器" class="headerlink" title="解释器"></a>解释器</h4><p>CPython</p>
+<h3 id="解释器"><a href="#解释器" class="headerlink" title="解释器"></a>解释器</h3><p>CPython</p>
 <ul>
 <li><p>python默认解释器。</p>
 </li>
@@ -552,31 +552,75 @@
 </li>
 </ul>
 <h3 id="条件判断和循环"><a href="#条件判断和循环" class="headerlink" title="条件判断和循环"></a>条件判断和循环</h3><p>if和while</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li><p>定义</p>
-</li>
-<li><p>调用</p>
-</li>
-<li><p>参数</p>
-<p>默认参数在后。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>默认参数在后。</p>
 <p>变化小的参数在后。</p>
 <p>可变参数：*numbers</p>
-</li>
-<li><p>递归</p>
-</li>
-</ul>
-<h2 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h2><p>切片</p>
-<p>[][1:-2:3]</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><h2 id="高级特性"><a href="#高级特性" class="headerlink" title="高级特性"></a>高级特性</h2><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[][1:-2:3]</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; [<span class="string">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</span>][<span class="symbol">1:-2:3</span>]</span><br><span class="line">[1, 4, 7]</span><br></pre></td></tr></table></figure>
-<p>迭代</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> <span class="selector-tag">i</span>, value <span class="keyword">in</span> enumerate([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]):</span><br><span class="line">...     print <span class="selector-tag">i</span>, value</span><br><span class="line">...</span><br><span class="line"><span class="number">0</span> A</span><br><span class="line"><span class="number">1</span> B</span><br><span class="line"><span class="number">2</span> C</span><br></pre></td></tr></table></figure>
-<p>列表生成器</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>[m + n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</span><br><span class="line">[<span class="string">'AX'</span>, <span class="string">'AY'</span>, <span class="string">'AZ'</span>, <span class="string">'BX'</span>, <span class="string">'BY'</span>, <span class="string">'BZ'</span>, <span class="string">'CX'</span>, <span class="string">'CY'</span>, <span class="string">'CZ'</span>]</span><br></pre></td></tr></table></figure>
-<p>*生成器</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">def</span> fib(max):</span><br><span class="line">    n, a, <span class="keyword">b </span>= <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="meta">while</span> n &lt; max:</span><br><span class="line">        <span class="keyword">yield </span><span class="keyword">b</span></span><br><span class="line"><span class="keyword"> </span>       a, <span class="keyword">b </span>= <span class="keyword">b, </span>a + <span class="keyword">b</span></span><br><span class="line"><span class="keyword"> </span>       n = n + <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">&gt;&gt;&gt; fib(<span class="number">6</span>)</span><br><span class="line">&lt;generator object fib at <span class="number">0x104feaaa0</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> <span class="selector-tag">i</span>, value <span class="keyword">in</span> enumerate([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>]):</span><br><span class="line">...     print <span class="selector-tag">i</span>, value</span><br><span class="line">...</span><br><span class="line"><span class="number">0</span> A</span><br><span class="line"><span class="number">1</span> B</span><br><span class="line"><span class="number">2</span> C</span><br></pre></td></tr></table></figure>
+<h3 id="列表生成器"><a href="#列表生成器" class="headerlink" title="列表生成器"></a>列表生成器</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>[m + n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</span><br><span class="line">[<span class="string">'AX'</span>, <span class="string">'AY'</span>, <span class="string">'AZ'</span>, <span class="string">'BX'</span>, <span class="string">'BY'</span>, <span class="string">'BZ'</span>, <span class="string">'CX'</span>, <span class="string">'CY'</span>, <span class="string">'CZ'</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="生成器"><a href="#生成器" class="headerlink" title="*生成器"></a>*生成器</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">def</span> fib(max):</span><br><span class="line">    n, a, <span class="keyword">b </span>= <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="meta">while</span> n &lt; max:</span><br><span class="line">        <span class="keyword">yield </span><span class="keyword">b</span></span><br><span class="line"><span class="keyword"> </span>       a, <span class="keyword">b </span>= <span class="keyword">b, </span>a + <span class="keyword">b</span></span><br><span class="line"><span class="keyword"> </span>       n = n + <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">&gt;&gt;&gt; fib(<span class="number">6</span>)</span><br><span class="line">&lt;generator object fib at <span class="number">0x104feaaa0</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>generator的函数，在每次调用<code>next()</code>的时候执行，遇到<code>yield</code>语句返回，再次执行时从上次返回的<code>yield</code>语句处继续执行。</p>
-<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><p>todo</p>
-<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h2 id="面向对象（OOP）"><a href="#面向对象（OOP）" class="headerlink" title="面向对象（OOP）"></a>面向对象（OOP）</h2><h2 id="错误、调试和测试"><a href="#错误、调试和测试" class="headerlink" title="错误、调试和测试"></a>错误、调试和测试</h2><h2 id="IO编程"><a href="#IO编程" class="headerlink" title="IO编程"></a>IO编程</h2><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h2 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h2><h2 id="常用第三方模块"><a href="#常用第三方模块" class="headerlink" title="常用第三方模块"></a>常用第三方模块</h2><h2 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h2><h2 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h2>
+<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h3><h4 id="map-和reduce"><a href="#map-和reduce" class="headerlink" title="map()和reduce()"></a><code>map()</code>和<code>reduce()</code></h4><ol>
+<li>map()<ul>
+<li>接收两个参数，一个是函数，一个是列表。</li>
+<li>将传入的函数依次作用到序列的每个元素。</li>
+<li>把结果作为新的列表返回。</li>
+</ul>
+</li>
+<li>reduce()<ul>
+<li>接收两个参数，一个是函数，一个是列表。</li>
+<li>将传入的函数作用到列表的第一个元素，并把结果继续和列表的下一个元素做累积计算。</li>
+<li>返回最终结果。</li>
+</ul>
+</li>
+</ol>
+<h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h4><ul>
+<li>接收两个参数，一个是函数，一个是列表。</li>
+<li>将传入的函数依次作用到序列的每个元素。</li>
+<li>依次判断结果为True或False，为True则加入列表，为False则舍弃。</li>
+<li>最终返回判断过的新列表。</li>
+</ul>
+<h4 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h4><ul>
+<li>接收两个参数，一个是函数（可选），一个是列表。</li>
+<li>传入列表，按照ASCII的大小比较的。</li>
+<li>传入函数和列表，按照函数比较。</li>
+</ul>
+<h3 id="返回函数"><a href="#返回函数" class="headerlink" title="返回函数"></a>返回函数</h3><h4 id="函数作为返回值"><a href="#函数作为返回值" class="headerlink" title="函数作为返回值"></a>函数作为返回值</h4><ul>
+<li>调用结果互不影响。</li>
+<li>返回的函数并没有立刻执行，而是直到调用了才执行。</li>
+</ul>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">()</span>:</span></span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">4</span>):</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">()</span>:</span></span><br><span class="line">             <span class="keyword">return</span> i*i</span><br><span class="line">        fs.append(f)</span><br><span class="line">    <span class="keyword">return</span> fs</span><br><span class="line"></span><br><span class="line">f1, f2, f3 = count()</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; f1()</span></span><br><span class="line">9</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; f2()</span></span><br><span class="line">9</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; f3()</span></span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+<p>原因：</p>
+<p>返回的函数引用了变量i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量i已经变成了3，因此最终结果为9。</p>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>例如：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="selector-tag">map</span>(lambda <span class="attribute">x</span>: x * x, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>])</span><br><span class="line"><span class="selector-attr">[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。</li>
+<li>只能有一个表达式， 返回值就是该表达式的结果。</li>
+<li>没有函数名，不必担心函数名冲突。</li>
+</ul>
+<h3 id="装饰器（decorator）"><a href="#装饰器（decorator）" class="headerlink" title="*装饰器（decorator）"></a>*装饰器（decorator）</h3><p>代码运行期间动态增加功能，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">'call %s():'</span> % func.__name__</span><br><span class="line">        <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'2018-10-25'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; now()</span></span><br><span class="line">call now():</span><br><span class="line">2018-10-25</span><br></pre></td></tr></table></figure>
+<ul>
+<li>由于<code>log()</code>是一个decorator，返回一个函数，所以，原来的<code>now()</code>函数仍然存在，只是现在同名的now变量指向了新的函数，于是调用<code>now()</code>将执行新函数，即在<code>log()</code>函数中返回的<code>wrapper()</code>函数。</li>
+<li><code>wrapper()</code>函数的参数定义是<code>(*args, **kw)</code>，因此，<code>wrapper()</code>函数可以接受任意参数的调用。在<code>wrapper()</code>函数内，首先打印日志，再紧接着调用原始函数。</li>
+</ul>
+<h3 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h3><p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> functools</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int2 = functools.partial(int, base=<span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int2(<span class="string">'1000000'</span>)</span><br><span class="line"><span class="number">64</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int2(<span class="string">'1010101'</span>)</span><br><span class="line"><span class="number">85</span></span><br></pre></td></tr></table></figure>
+<p>相当于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kw = &#123; base: <span class="number">2</span> &#125;</span><br><span class="line">int(<span class="string">'10010'</span>, **kw)</span><br></pre></td></tr></table></figure>
+<p>同时传入其他值，依然适用：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; int2(<span class="string">'1000000'</span>, base=<span class="number">10</span>)</span><br><span class="line"><span class="number">1000000</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当函数的参数个数太多时，使用<code>functools.partial</code>可以创建一个新的函数，来固定住原函数的部分参数，让调用更简单。    </li>
+</ul>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>todo</p>
+<h2 id="面向对象（OOP）"><a href="#面向对象（OOP）" class="headerlink" title="面向对象（OOP）"></a>面向对象（OOP）</h2><h2 id="错误、调试和测试"><a href="#错误、调试和测试" class="headerlink" title="错误、调试和测试"></a>错误、调试和测试</h2><h2 id="IO编程"><a href="#IO编程" class="headerlink" title="IO编程"></a>IO编程</h2><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h2 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h2><h2 id="常用第三方模块"><a href="#常用第三方模块" class="headerlink" title="常用第三方模块"></a>常用第三方模块</h2><h2 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h2><h2 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h2>
       
     </div>
     
@@ -882,7 +926,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python简介"><span class="nav-number">1.</span> <span class="nav-text">Python简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件类型"><span class="nav-number">1.0.1.</span> <span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解释器"><span class="nav-number">1.0.2.</span> <span class="nav-text">解释器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础"><span class="nav-number">2.</span> <span class="nav-text">Python基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">2.2.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机处理编码方式"><span class="nav-number">2.3.</span> <span class="nav-text">计算机处理编码方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码转换"><span class="nav-number">2.4.</span> <span class="nav-text">编码转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.5.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断和循环"><span class="nav-number">2.6.</span> <span class="nav-text">条件判断和循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级特性"><span class="nav-number">4.</span> <span class="nav-text">高级特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数式编程"><span class="nav-number">5.</span> <span class="nav-text">函数式编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块"><span class="nav-number">6.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象（OOP）"><span class="nav-number">7.</span> <span class="nav-text">面向对象（OOP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误、调试和测试"><span class="nav-number">8.</span> <span class="nav-text">错误、调试和测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO编程"><span class="nav-number">9.</span> <span class="nav-text">IO编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程"><span class="nav-number">10.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">11.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准库"><span class="nav-number">12.</span> <span class="nav-text">标准库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用第三方模块"><span class="nav-number">13.</span> <span class="nav-text">常用第三方模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图形界面"><span class="nav-number">14.</span> <span class="nav-text">图形界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问数据库"><span class="nav-number">15.</span> <span class="nav-text">访问数据库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python简介"><span class="nav-number">1.</span> <span class="nav-text">Python简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件类型"><span class="nav-number">1.1.</span> <span class="nav-text">文件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释器"><span class="nav-number">1.2.</span> <span class="nav-text">解释器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基础"><span class="nav-number">2.</span> <span class="nav-text">Python基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">2.2.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机处理编码方式"><span class="nav-number">2.3.</span> <span class="nav-text">计算机处理编码方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码转换"><span class="nav-number">2.4.</span> <span class="nav-text">编码转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.5.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件判断和循环"><span class="nav-number">2.6.</span> <span class="nav-text">条件判断和循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用"><span class="nav-number">3.2.</span> <span class="nav-text">调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">3.3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归"><span class="nav-number">3.4.</span> <span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级特性"><span class="nav-number">4.</span> <span class="nav-text">高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#切片"><span class="nav-number">4.1.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代"><span class="nav-number">4.2.</span> <span class="nav-text">迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表生成器"><span class="nav-number">4.3.</span> <span class="nav-text">列表生成器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器"><span class="nav-number">4.4.</span> <span class="nav-text">*生成器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数式编程"><span class="nav-number">5.</span> <span class="nav-text">函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#高阶函数"><span class="nav-number">5.1.</span> <span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#map-和reduce"><span class="nav-number">5.1.1.</span> <span class="nav-text">map()和reduce()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filter"><span class="nav-number">5.1.2.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted"><span class="nav-number">5.1.3.</span> <span class="nav-text">sorted</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回函数"><span class="nav-number">5.2.</span> <span class="nav-text">返回函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为返回值"><span class="nav-number">5.2.1.</span> <span class="nav-text">函数作为返回值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包"><span class="nav-number">5.2.2.</span> <span class="nav-text">闭包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名函数"><span class="nav-number">5.3.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰器（decorator）"><span class="nav-number">5.4.</span> <span class="nav-text">*装饰器（decorator）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#偏函数"><span class="nav-number">5.5.</span> <span class="nav-text">偏函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块"><span class="nav-number">6.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象（OOP）"><span class="nav-number">7.</span> <span class="nav-text">面向对象（OOP）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误、调试和测试"><span class="nav-number">8.</span> <span class="nav-text">错误、调试和测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO编程"><span class="nav-number">9.</span> <span class="nav-text">IO编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程"><span class="nav-number">10.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">11.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准库"><span class="nav-number">12.</span> <span class="nav-text">标准库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用第三方模块"><span class="nav-number">13.</span> <span class="nav-text">常用第三方模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图形界面"><span class="nav-number">14.</span> <span class="nav-text">图形界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问数据库"><span class="nav-number">15.</span> <span class="nav-text">访问数据库</span></a></li></ol></div>
             
 
           </div>
