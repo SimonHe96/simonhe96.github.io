@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.simon96.online/2018/10/12/hexo-tutorial/</loc>
+    
+    <lastmod>2018-10-27T05:16:03.551Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.simon96.online/2018/10/17/python2-tutorial/</loc>
     
-    <lastmod>2018-10-27T04:30:13.775Z</lastmod>
+    <lastmod>2018-10-27T04:45:54.111Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://www.simon96.online/2018/10/01/Typora%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89/</loc>
     
     <lastmod>2018-10-26T15:08:25.094Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.simon96.online/2018/10/12/hexo-tutorial/</loc>
-    
-    <lastmod>2018-10-26T15:04:23.805Z</lastmod>
     
   </url>
   
