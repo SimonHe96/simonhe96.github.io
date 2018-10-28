@@ -91,7 +91,7 @@
 <meta name="description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置">
+<meta property="og:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
 <meta property="og:url" content="https://www.simon96.online/2018/10/12/hexo-tutorial/index.html">
 <meta property="og:site_name" content="遇见西门">
 <meta property="og:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -116,9 +116,9 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-10-28T04:48:26.493Z">
+<meta property="og:updated_time" content="2018-10-28T13:08:17.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置">
+<meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
 <meta name="twitter:image" content="https://huaji8.top/img/live2d/Epsilon2.1.gif">
 
@@ -156,7 +156,7 @@
 
 
 
-  <title>【持续更新】最全Hexo个人博客搭建+主题优化+插件配置 | 遇见西门</title>
+  <title>【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析 | 遇见西门</title>
   
 
 
@@ -361,7 +361,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【持续更新】最全Hexo个人博客搭建+主题优化+插件配置</h2>
+          <h2 class="post-title" itemprop="name headline">【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析</h2>
         
 
         <div class="post-meta">
@@ -389,7 +389,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T12:48:26+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T21:08:17+08:00">
                 2018-10-28
               </time>
             
@@ -425,7 +425,7 @@
 
           
           
-             <span id="/2018/10/12/hexo-tutorial/" class="leancloud_visitors" data-flag-title="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置">
+             <span id="/2018/10/12/hexo-tutorial/" class="leancloud_visitors" data-flag-title="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.4k
+                  5.5k
                 </span>
               
 
@@ -466,7 +466,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  19
+                  24
                 </span>
               
             </div>
@@ -950,6 +950,81 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h3 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h3><p>如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。</p>
+<h5 id="YAML-Parsing-Error"><a href="#YAML-Parsing-Error" class="headerlink" title="YAML Parsing Error"></a>YAML Parsing Error</h5><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: incomplete <span class="built_in">explicit</span> mapping pair; a <span class="built_in">key</span> node <span class="built_in">is</span> missed <span class="built_in">at</span> line <span class="number">18</span>, column <span class="number">29</span>:</span><br><span class="line">      last_updated: Last updated: <span class="built_in">%s</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>参数中包含冒号，请用加引号，如<code>Last updated: %s</code></li>
+</ol>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: bad indentation <span class="keyword">of</span> <span class="keyword">a</span> mapping entry <span class="keyword">at</span> <span class="built_in">line</span> <span class="number">18</span>, column <span class="number">31</span>:</span><br><span class="line">      last_updated：<span class="string">"Last updated: %s"</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>字段后面的冒号必须为<strong>英文冒号</strong>，如：last_updated:</li>
+<li>字段冒号后面必须跟一个空格，如：last_updated: “Last updated: %s”</li>
+</ol>
+<h5 id="EMFILE-Error"><a href="#EMFILE-Error" class="headerlink" title="EMFILE Error"></a>EMFILE Error</h5><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>EMFILE, too many open files</span><br></pre></td></tr></table></figure>
+<p>生成大量的文件时，可能遇到EMFILE错误。</p>
+<p>可以运行以下命令来增加允许同步I / O操作的数量。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">ulimit</span> -n 10000</span></span><br></pre></td></tr></table></figure>
+<h5 id="Process-Out-of-Memory"><a href="#Process-Out-of-Memory" class="headerlink" title="Process Out of Memory"></a>Process Out of Memory</h5><p>当<code>hexo g</code>时，遇到以下错误：</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FATAL <span class="literal">ERROR</span>: CALL_AND_RETRY_LAST Allocation failed - <span class="keyword">process</span> <span class="keyword">out</span> <span class="keyword">of</span> memory</span><br></pre></td></tr></table></figure>
+<p>如下，更改<code>hexo-cli</code>文件的第一行，来增大nodejs堆内存.该bug已在<a href="https://github.com/hexojs/hexo/issues/1735" target="_blank" rel="noopener">新版本</a>修复。</p>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node --max_old_space_size=8192</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Deployment-Problems"><a href="#Git-Deployment-Problems" class="headerlink" title="Git Deployment Problems"></a>Git Deployment Problems</h2><ol>
+<li>RPC failed</li>
+</ol>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error: </span>RPC failed; result=22, HTTP code = 403</span><br><span class="line"></span><br><span class="line">fatal: 'username.github.io' does not appear to be a git repository</span><br></pre></td></tr></table></figure>
+<p>确保你有你的电脑上设置git正确或尝试使用HTTPS存储库URL。</p>
+<ol start="2">
+<li>Error: ENOENT: no such file or directory</li>
+</ol>
+<p>这个需要有一定的git的知识，因为可能是由于写错了标签,类别,或文件名，导致本地和github冲突了，Git不能自动合并这一变化所以它打破了自动分支。</p>
+<p>解决办法：</p>
+<ol>
+<li>检查文章的标签和类别,确保本地和github上是相同的。</li>
+<li>合并分支（Commit）。</li>
+<li>清除，重构。在站点目录下，命令行运行<code>hexo clean</code>和<code>hexo g</code></li>
+<li>手动将站点目录下的<code>public</code>文件夹复制到您的桌面</li>
+<li>从你的master分支切换到部署在本地分支。</li>
+<li>从桌面复制<code>public</code>文件夹到本地分支。</li>
+<li>合并分支到github（Commit）。</li>
+<li>切回master分支。</li>
+</ol>
+<h5 id="Server-Problems"><a href="#Server-Problems" class="headerlink" title="Server Problems"></a>Server Problems</h5><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>listen EADDRINUSE</span><br></pre></td></tr></table></figure>
+<p>你可能使用相同的端口，同时开启了两个Hexo服务器。如果需要同时开启，可以尝试修改端口设置：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-p 5000</span><br></pre></td></tr></table></figure>
+<h5 id="Plugin-Installation-Problems"><a href="#Plugin-Installation-Problems" class="headerlink" title="Plugin Installation Problems"></a>Plugin Installation Problems</h5><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! <span class="keyword">node</span><span class="title">-waf</span> configure build</span><br></pre></td></tr></table></figure>
+<p>这个错误可能发生在试图安装一个用Cc++或另一个javascript语言编写的插件。确保您已经安装了正确的编译器在您的计算机上。</p>
+<h5 id="Error-with-DTrace-Mac-OS-X"><a href="#Error-with-DTrace-Mac-OS-X" class="headerlink" title="Error with DTrace (Mac OS X)"></a>Error with DTrace (Mac OS X)</h5><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>DTrace安装可能有问题，重装:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install hexo --<span class="literal">no</span>-optional</span><br></pre></td></tr></table></figure>
+<p>详见 <a href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796" target="_blank" rel="noopener">#1326</a></p>
+<h5 id="Iterate-Data-Model-on-Jade-or-Swig"><a href="#Iterate-Data-Model-on-Jade-or-Swig" class="headerlink" title="Iterate Data Model on Jade or Swig"></a>Iterate Data Model on Jade or Swig</h5><p>Hexo使用仓库的数据模型。这不是一个数组,所以你可能需要将对象转换为iterable。</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> post <span class="keyword">in</span> site.posts.toArray() %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
+<h5 id="Data-Not-Updated"><a href="#Data-Not-Updated" class="headerlink" title="Data Not Updated"></a>Data Not Updated</h5><p>一些数据不能更新或新生成的文件的最后一个版本完全相同。清理缓存，再试一次：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
+<h5 id="No-command-is-executed"><a href="#No-command-is-executed" class="headerlink" title="No command is executed"></a>No command is executed</h5><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行时,  有可能时站点目录下的  <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.2.2"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Escape-Contents"><a href="#Escape-Contents" class="headerlink" title="Escape Contents"></a>Escape Contents</h5><p>Hexo使用Nunjucks渲染的页面. <code>{ { } }</code>或<code>{ % % }</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
+
+Hello {{ sensitive }}
+
+<p>​<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">##### ENOSPC Error (Linux)</span><br><span class="line"></span><br><span class="line">如果运行命令`$ hexo server` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行：</span><br></pre></td></tr></table></figure></p>
+<p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">来增加测试时，你可以看见的文件数量。</span><br><span class="line"></span><br><span class="line">##### EMPERM Error (Windows Subsystem for Linux)</span><br><span class="line"></span><br><span class="line">如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
+<p>$ hexo generate<br>$ hexo server -s<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##### Template render error</span><br><span class="line"></span><br><span class="line">有时运行命令`$ hexo generate` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
+<p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件`_config.yml`中，比如缩进错误：</span><br><span class="line"></span><br><span class="line">错误例子：</span><br></pre></td></tr></table></figure></p>
+<p>plugins:</p>
+<ul>
+<li>hexo-generator-feed</li>
+<li>hexo-generator-sitemap<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">正确例子：</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>plugins:</p>
+<ul>
+<li>hexo-generator-feed</li>
+<li>hexo-generator-sitemap<br><code>`</code></li>
+</ul>
 <hr>
 <h3 id="感谢支持"><a href="#感谢支持" class="headerlink" title="感谢支持"></a>感谢支持</h3><table>
 <thead>
@@ -1051,7 +1126,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" title="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置">https://www.simon96.online/2018/10/12/hexo-tutorial/</a>
+    <a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" title="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">https://www.simon96.online/2018/10/12/hexo-tutorial/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -1284,6 +1359,10 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
+                    <a href="http://cgteamwork.com/" title="CGTeamWork" target="_blank">CGTeamWork</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="http://www.zhuiguang.com/" title="追光动画" target="_blank">追光动画</a>
                   </li>
                 
@@ -1318,7 +1397,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo博客搭建"><span class="nav-number">2.</span> <span class="nav-text">Hexo博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备环境"><span class="nav-number">2.1.</span> <span class="nav-text">准备环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实施方案"><span class="nav-number">2.2.</span> <span class="nav-text">实施方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方案一：GithubPages"><span class="nav-number">2.2.1.</span> <span class="nav-text">方案一：GithubPages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案二：GithubPages-域名"><span class="nav-number">2.2.2.</span> <span class="nav-text">方案二：GithubPages + 域名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案三：GithubPages-CodingPages-域名"><span class="nav-number">2.2.3.</span> <span class="nav-text">方案三：GithubPages + CodingPages + 域名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo主题优化"><span class="nav-number">3.</span> <span class="nav-text">Hexo主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择主题"><span class="nav-number">3.1.</span> <span class="nav-text">选择主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用主题"><span class="nav-number">3.2.</span> <span class="nav-text">应用主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题优化"><span class="nav-number">3.3.</span> <span class="nav-text">主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加背景图"><span class="nav-number">3.3.1.</span> <span class="nav-text">添加背景图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改Logo字体"><span class="nav-number">3.3.2.</span> <span class="nav-text">修改Logo字体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改内容区域的宽度"><span class="nav-number">3.3.3.</span> <span class="nav-text">修改内容区域的宽度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网站标题栏背景颜色"><span class="nav-number">3.3.4.</span> <span class="nav-text">网站标题栏背景颜色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义鼠标样式"><span class="nav-number">3.3.5.</span> <span class="nav-text">自定义鼠标样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文章加密访问"><span class="nav-number">3.3.6.</span> <span class="nav-text">文章加密访问</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现点击出现桃心效果"><span class="nav-number">3.3.7.</span> <span class="nav-text">实现点击出现桃心效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态资源压缩"><span class="nav-number">3.3.8.</span> <span class="nav-text">静态资源压缩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改访问URL路径"><span class="nav-number">3.3.9.</span> <span class="nav-text">修改访问URL路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博文置顶"><span class="nav-number">3.3.10.</span> <span class="nav-text">博文置顶</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在右上角或者左上角实现fork-me-on-github"><span class="nav-number">3.3.11.</span> <span class="nav-text">在右上角或者左上角实现fork me on github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主页文章添加边框阴影效果"><span class="nav-number">3.3.12.</span> <span class="nav-text">主页文章添加边框阴影效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示当前浏览进度"><span class="nav-number">3.3.13.</span> <span class="nav-text">显示当前浏览进度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分类页"><span class="nav-number">3.3.14.</span> <span class="nav-text">创建分类页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加入-广告"><span class="nav-number">3.3.15.</span> <span class="nav-text">加入 广告</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加萌萌哒"><span class="nav-number">3.3.16.</span> <span class="nav-text">添加萌萌哒</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo插件配置"><span class="nav-number">4.</span> <span class="nav-text">Hexo插件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#评论系统"><span class="nav-number">4.1.</span> <span class="nav-text">评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Valine"><span class="nav-number">4.1.1.</span> <span class="nav-text">Valine</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#来必力-livere"><span class="nav-number">4.1.2.</span> <span class="nav-text">来必力/livere</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#畅言"><span class="nav-number">4.1.3.</span> <span class="nav-text">畅言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gitment"><span class="nav-number">4.1.4.</span> <span class="nav-text">gitment</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Disqus"><span class="nav-number">4.1.5.</span> <span class="nav-text">Disqus</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据统计与分析"><span class="nav-number">4.2.</span> <span class="nav-text">数据统计与分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不蒜子"><span class="nav-number">4.2.1.</span> <span class="nav-text">不蒜子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#百度统计"><span class="nav-number">4.2.2.</span> <span class="nav-text">百度统计</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容分享服务"><span class="nav-number">4.3.</span> <span class="nav-text">内容分享服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#百度分享"><span class="nav-number">4.3.1.</span> <span class="nav-text">百度分享</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#need-more-share2"><span class="nav-number">4.3.2.</span> <span class="nav-text">need-more-share2</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索服务"><span class="nav-number">4.4.</span> <span class="nav-text">搜索服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Local-Search"><span class="nav-number">4.4.1.</span> <span class="nav-text">Local Search</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感谢支持"><span class="nav-number">5.</span> <span class="nav-text">感谢支持</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo博客搭建"><span class="nav-number">2.</span> <span class="nav-text">Hexo博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备环境"><span class="nav-number">2.1.</span> <span class="nav-text">准备环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实施方案"><span class="nav-number">2.2.</span> <span class="nav-text">实施方案</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方案一：GithubPages"><span class="nav-number">2.2.1.</span> <span class="nav-text">方案一：GithubPages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案二：GithubPages-域名"><span class="nav-number">2.2.2.</span> <span class="nav-text">方案二：GithubPages + 域名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案三：GithubPages-CodingPages-域名"><span class="nav-number">2.2.3.</span> <span class="nav-text">方案三：GithubPages + CodingPages + 域名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo主题优化"><span class="nav-number">3.</span> <span class="nav-text">Hexo主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择主题"><span class="nav-number">3.1.</span> <span class="nav-text">选择主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用主题"><span class="nav-number">3.2.</span> <span class="nav-text">应用主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题优化"><span class="nav-number">3.3.</span> <span class="nav-text">主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加背景图"><span class="nav-number">3.3.1.</span> <span class="nav-text">添加背景图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改Logo字体"><span class="nav-number">3.3.2.</span> <span class="nav-text">修改Logo字体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改内容区域的宽度"><span class="nav-number">3.3.3.</span> <span class="nav-text">修改内容区域的宽度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网站标题栏背景颜色"><span class="nav-number">3.3.4.</span> <span class="nav-text">网站标题栏背景颜色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义鼠标样式"><span class="nav-number">3.3.5.</span> <span class="nav-text">自定义鼠标样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文章加密访问"><span class="nav-number">3.3.6.</span> <span class="nav-text">文章加密访问</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现点击出现桃心效果"><span class="nav-number">3.3.7.</span> <span class="nav-text">实现点击出现桃心效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态资源压缩"><span class="nav-number">3.3.8.</span> <span class="nav-text">静态资源压缩</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改访问URL路径"><span class="nav-number">3.3.9.</span> <span class="nav-text">修改访问URL路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博文置顶"><span class="nav-number">3.3.10.</span> <span class="nav-text">博文置顶</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在右上角或者左上角实现fork-me-on-github"><span class="nav-number">3.3.11.</span> <span class="nav-text">在右上角或者左上角实现fork me on github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主页文章添加边框阴影效果"><span class="nav-number">3.3.12.</span> <span class="nav-text">主页文章添加边框阴影效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示当前浏览进度"><span class="nav-number">3.3.13.</span> <span class="nav-text">显示当前浏览进度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分类页"><span class="nav-number">3.3.14.</span> <span class="nav-text">创建分类页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加入-广告"><span class="nav-number">3.3.15.</span> <span class="nav-text">加入 广告</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加萌萌哒"><span class="nav-number">3.3.16.</span> <span class="nav-text">添加萌萌哒</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo插件配置"><span class="nav-number">4.</span> <span class="nav-text">Hexo插件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#评论系统"><span class="nav-number">4.1.</span> <span class="nav-text">评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Valine"><span class="nav-number">4.1.1.</span> <span class="nav-text">Valine</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#来必力-livere"><span class="nav-number">4.1.2.</span> <span class="nav-text">来必力/livere</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#畅言"><span class="nav-number">4.1.3.</span> <span class="nav-text">畅言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gitment"><span class="nav-number">4.1.4.</span> <span class="nav-text">gitment</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Disqus"><span class="nav-number">4.1.5.</span> <span class="nav-text">Disqus</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据统计与分析"><span class="nav-number">4.2.</span> <span class="nav-text">数据统计与分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不蒜子"><span class="nav-number">4.2.1.</span> <span class="nav-text">不蒜子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#百度统计"><span class="nav-number">4.2.2.</span> <span class="nav-text">百度统计</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容分享服务"><span class="nav-number">4.3.</span> <span class="nav-text">内容分享服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#百度分享"><span class="nav-number">4.3.1.</span> <span class="nav-text">百度分享</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#need-more-share2"><span class="nav-number">4.3.2.</span> <span class="nav-text">need-more-share2</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索服务"><span class="nav-number">4.4.</span> <span class="nav-text">搜索服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Local-Search"><span class="nav-number">4.4.1.</span> <span class="nav-text">Local Search</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误分析"><span class="nav-number">5.</span> <span class="nav-text">错误分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#YAML-Parsing-Error"><span class="nav-number">5.0.1.</span> <span class="nav-text">YAML Parsing Error</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#EMFILE-Error"><span class="nav-number">5.0.2.</span> <span class="nav-text">EMFILE Error</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Process-Out-of-Memory"><span class="nav-number">5.0.3.</span> <span class="nav-text">Process Out of Memory</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-Deployment-Problems"><span class="nav-number"></span> <span class="nav-text">Git Deployment Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Server-Problems"><span class="nav-number">0.0.1.</span> <span class="nav-text">Server Problems</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Plugin-Installation-Problems"><span class="nav-number">0.0.2.</span> <span class="nav-text">Plugin Installation Problems</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Error-with-DTrace-Mac-OS-X"><span class="nav-number">0.0.3.</span> <span class="nav-text">Error with DTrace (Mac OS X)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Iterate-Data-Model-on-Jade-or-Swig"><span class="nav-number">0.0.4.</span> <span class="nav-text">Iterate Data Model on Jade or Swig</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Data-Not-Updated"><span class="nav-number">0.0.5.</span> <span class="nav-text">Data Not Updated</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#No-command-is-executed"><span class="nav-number">0.0.6.</span> <span class="nav-text">No command is executed</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Escape-Contents"><span class="nav-number">0.0.7.</span> <span class="nav-text">Escape Contents</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感谢支持"><span class="nav-number">1.</span> <span class="nav-text">感谢支持</span></a></li></div>
             
 
           </div>
