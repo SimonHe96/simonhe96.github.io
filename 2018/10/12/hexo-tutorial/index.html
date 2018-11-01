@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-10-30T00:17:01.126Z">
+<meta property="og:updated_time" content="2018-11-01T11:45:39.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -379,8 +379,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-30T08:17:01+08:00">
-                2018-10-30
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T19:45:39+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -490,18 +490,18 @@
 </li>
 <li><p><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载并安装。</p>
 </li>
-<li><p>安装Hexo，在命令行输入以下命令，运行即可：</p>
+<li><p>安装Hexo，在命令行（即Git Bash）运行以下命令：</p>
 <blockquote>
 <p>npm install -g hexo-cli</p>
 </blockquote>
 </li>
-<li><p>初始化Hexo，在命令行依次输入以下命令，运行即可：</p>
+<li><p>初始化Hexo，在命令行（即Git Bash）依次运行以下命令即可：</p>
 <p>其中<folder>为：存放Hexo初始化文件的路径。</folder></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br></pre></td></tr></table></figure>
 <p>新建完成后，在<folder>路径下，会产生这些文件和文件夹：</folder></p>
 <figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>启动服务器。在<folder>路径下，命令行输入以下命令，运行即可：</folder></p>
+<li><p>启动服务器。在<folder>路径下，命令行（即Git Bash）输入以下命令，运行即可：</folder></p>
 <blockquote>
 <p>hexo server</p>
 </blockquote>
@@ -516,13 +516,13 @@
 <li><p>创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io</p>
 </li>
 <li><p>将本地Hexo博客推送到GithubPages</p>
-<p>3.1. 安装<code>hexo-deployer-git</code>插件。在命令行输入以下命令即可：</p>
+<p>3.1. 安装<code>hexo-deployer-git</code>插件。在命令行（即Git Bash）运行以下命令即可：</p>
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
 </blockquote>
 <p>3.2. 添加SSH key。</p>
 <ul>
-<li>创建一个 SSH key 。在命令行输入以下命令， 回车三下即可：</li>
+<li>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</li>
 </ul>
 <blockquote>
 <p>ssh-keygen -t rsa -C “邮箱地址”</p>
@@ -530,13 +530,13 @@
 <ul>
 <li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a href="https://github.com/settings/keys" target="_blank" rel="noopener">New SSH Key</a>即可。</p>
 </li>
-<li><p>测试是否添加成功。在命令行依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
+<li><p>测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> yes</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>3.3. 修改<code>_config.yml</code>（在存放Hexo初始化文件的路径下）。文件末尾修改为：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Deployment</span></span><br><span class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repo:</span> git@github.com:<span class="params">&lt;Github账号名称&gt;</span>/<span class="params">&lt;Github账号名称&gt;</span>.github.io.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
-<p>3.4. 推送到GithubPages。在命令行依次输入以下命令， 返回<code>INFO  Deploy done: git</code>即成功推送：</p>
+<p>3.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO  Deploy done: git</code>即成功推送：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>浏览器访问网址： <code>https://&lt;Github账号名称&gt;.github.io</code></p>
@@ -570,11 +570,11 @@
 </li>
 <li><p>将本地Hexo博客推送到CodingPages</p>
 <p>4.1. 鉴于创建GithubPages 时，已经生成过公钥。可直接复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>）， 粘贴到<a href="https://dev.tencent.com/user/account/setting/keys" target="_blank" rel="noopener">新增公钥</a>。</p>
-<p>4.2. 测试是否添加成功。在命令行依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
+<p>4.2. 测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@git.coding.net</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> yes</span></span><br></pre></td></tr></table></figure>
 <p>4.3. 修改<code>_config.yml</code>（在存放Hexo初始化文件的路径下）。文件末尾修改为：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Deployment</span></span><br><span class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line">- type: git</span><br><span class="line"><span class="symbol">  repo:</span> git@github.com:<span class="params">&lt;Github账号名称&gt;</span>/<span class="params">&lt;Github账号名称&gt;</span>.github.io.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br><span class="line">- type: git</span><br><span class="line"><span class="symbol">  repo:</span> git@git.dev.tencent.com:<span class="params">&lt;Coding账号名称&gt;</span>/<span class="params">&lt;Coding账号名称&gt;</span>.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
-<p>4.4. 推送到GithubPages。在命令行依次输入以下命令， 返回<code>INFO  Deploy done: git</code>即成功推送：</p>
+<p>4.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO  Deploy done: git</code>即成功推送：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>域名解析</p>
@@ -971,7 +971,7 @@
 <ol>
 <li>检查文章的标签和类别,确保本地和github上是相同的。</li>
 <li>合并分支（Commit）。</li>
-<li>清除，重构。在站点目录下，命令行运行<code>hexo clean</code>和<code>hexo g</code></li>
+<li>清除，重构。在站点目录下，命令行（即Git Bash）运行<code>hexo clean</code>和<code>hexo g</code></li>
 <li>手动将站点目录下的<code>public</code>文件夹复制到您的桌面</li>
 <li>从你的master分支切换到部署在本地分支。</li>
 <li>从桌面复制<code>public</code>文件夹到本地分支。</li>
@@ -991,7 +991,7 @@
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> post <span class="keyword">in</span> site.posts.toArray() %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <h4 id="Data-Not-Updated"><a href="#Data-Not-Updated" class="headerlink" title="Data Not Updated"></a>Data Not Updated</h4><p>一些数据不能更新或新生成的文件的最后一个版本完全相同。清理缓存，再试一次：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
-<h4 id="No-command-is-executed"><a href="#No-command-is-executed" class="headerlink" title="No command is executed"></a>No command is executed</h4><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行时,  有可能时站点目录下的  <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
+<h4 id="No-command-is-executed"><a href="#No-command-is-executed" class="headerlink" title="No command is executed"></a>No command is executed</h4><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行（即Git Bash）时,  有可能时站点目录下的  <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.2.2"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Escape-Contents"><a href="#Escape-Contents" class="headerlink" title="Escape Contents"></a>Escape Contents</h4><p>Hexo使用Nunjucks渲染的页面. <code>{ { } }</code>或<code>{ % % }</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
@@ -999,7 +999,7 @@
 Hello {{ sensitive }}
 
 <p>​<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">#### ENOSPC Error (Linux)</span><br><span class="line"></span><br><span class="line">如果运行命令`$ hexo server` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
-<p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行：</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行（即Git Bash）：</span><br></pre></td></tr></table></figure></p>
 <p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">来增加测试时，你可以看见的文件数量。</span><br><span class="line"></span><br><span class="line">#### EMPERM Error (Windows Subsystem for Linux)</span><br><span class="line"></span><br><span class="line">如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</span><br></pre></td></tr></table></figure></p>
 <p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
 <p>$ hexo generate<br>$ hexo server -s<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Template render error</span><br><span class="line"></span><br><span class="line">有时运行命令`$ hexo generate` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
