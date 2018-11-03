@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-11-01T13:55:30.701Z">
+<meta property="og:updated_time" content="2018-11-02T11:33:12.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -389,8 +389,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T21:55:30+08:00">
-                2018-11-01
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-02T19:33:12+08:00">
+                2018-11-02
               </time>
             
           </span>
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.7k
+                  5.8k
                 </span>
               
 
@@ -506,10 +506,21 @@
 </blockquote>
 </li>
 <li><p>初始化Hexo，在命令行（即Git Bash）依次运行以下命令即可：</p>
-<p>其中<folder>为：存放Hexo初始化文件的路径。</folder></p>
+<p>以下<folder>，即存放Hexo初始化文件的路径， 即站点目录。</folder></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br></pre></td></tr></table></figure>
 <p>新建完成后，在<folder>路径下，会产生这些文件和文件夹：</folder></p>
 <figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p><strong>注</strong>：</p>
+<ul>
+<li><p>hexo相关命令均在<strong>站点目录</strong>下，用<strong>Git Bash</strong>运行。</p>
+</li>
+<li><p>站点配置文件：站点目录下的<code>_config.yml</code>。</p>
+<p>​            路径为<code>&lt;folder&gt;\_config.yml</code></p>
+</li>
+<li><p>主题配置文件：站点目录下的<code>themes</code>文件夹下的，主题文件夹下的<code>_config.yml</code>。</p>
+<p>​            路径为<code>&lt;folder&gt;\themes\&lt;主题文件夹&gt;\_config.yml</code></p>
+</li>
+</ul>
 </li>
 <li><p>启动服务器。在<folder>路径下，命令行（即Git Bash）输入以下命令，运行即可：</folder></p>
 <blockquote>
@@ -1027,7 +1038,7 @@ Hello {{ sensitive }}
 <p>​<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">#### ENOSPC Error (Linux)</span><br><span class="line"></span><br><span class="line">如果运行命令`$ hexo server` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行（即Git Bash）：</span><br></pre></td></tr></table></figure></p>
 <p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">来增加测试时，你可以看见的文件数量。</span><br><span class="line"></span><br><span class="line">#### EMPERM Error (Windows Subsystem for Linux)</span><br><span class="line"></span><br><span class="line">如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</span><br></pre></td></tr></table></figure></p>
-<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
 <p>$ hexo generate<br>$ hexo server -s<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Template render error</span><br><span class="line"></span><br><span class="line">有时运行命令`$ hexo generate` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件`_config.yml`中，比如缩进错误：</span><br><span class="line"></span><br><span class="line">错误例子：</span><br></pre></td></tr></table></figure></p>
 <p>plugins:</p>
@@ -1203,8 +1214,8 @@ Hello {{ sensitive }}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/01/Typora入门（中文版）/" rel="next" title="Typora入门（中文版）">
-                <i class="fa fa-chevron-left"></i> Typora入门（中文版）
+              <a href="/2018/09/30/Typora-tutorial-English-edition/" rel="next" title="Typora tutorial(English edition)">
+                <i class="fa fa-chevron-left"></i> Typora tutorial(English edition)
               </a>
             
           </div>
