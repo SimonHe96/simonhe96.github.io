@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-11-02T11:33:12.452Z">
+<meta property="og:updated_time" content="2018-11-04T05:57:41.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo个人博客搭建+主题优化+插件配置+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -389,8 +389,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-02T19:33:12+08:00">
-                2018-11-02
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-04T13:57:41+08:00">
+                2018-11-04
               </time>
             
           </span>
@@ -538,17 +538,12 @@
 </li>
 <li><p>将本地Hexo博客推送到GithubPages</p>
 <p>3.1. 安装<code>hexo-deployer-git</code>插件。在命令行（即Git Bash）运行以下命令即可：</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
 <p>3.2. 添加SSH key。</p>
 <ul>
-<li>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</li>
-</ul>
-<blockquote>
-<p>ssh-keygen -t rsa -C “邮箱地址”</p>
-</blockquote>
-<ul>
+<li><p>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a href="https://github.com/settings/keys" target="_blank" rel="noopener">New SSH Key</a>即可。</p>
 </li>
 <li><p>测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
@@ -593,7 +588,7 @@
 <li><p>将本地Hexo博客推送到CodingPages</p>
 <p>4.1. 鉴于创建GithubPages 时，已经生成过公钥。可直接复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>）， 粘贴到<a href="https://dev.tencent.com/user/account/setting/keys" target="_blank" rel="noopener">新增公钥</a>。</p>
 <p>4.2. 测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@git.coding.net</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> yes</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh -T git@git.coding.net</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> yes</span></span><br></pre></td></tr></table></figure>
 <p>4.3. 修改<code>_config.yml</code>（在存放Hexo初始化文件的路径下）。文件末尾修改为：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Deployment</span></span><br><span class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line">- type: git</span><br><span class="line"><span class="symbol">  repo:</span> git@github.com:<span class="params">&lt;Github账号名称&gt;</span>/<span class="params">&lt;Github账号名称&gt;</span>.github.io.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br><span class="line">- type: git</span><br><span class="line"><span class="symbol">  repo:</span> git@git.dev.tencent.com:<span class="params">&lt;Coding账号名称&gt;</span>/<span class="params">&lt;Coding账号名称&gt;</span>.git</span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
 <p>4.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO  Deploy done: git</code>即成功推送：</p>
