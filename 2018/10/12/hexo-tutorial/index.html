@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-11-05T11:09:11.456Z">
+<meta property="og:updated_time" content="2018-11-05T11:48:18.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -389,7 +389,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-05T19:09:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-05T19:48:18+08:00">
                 2018-11-05
               </time>
             
@@ -1033,7 +1033,7 @@ Hello {{ sensitive }}
 <p>​<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">#### ENOSPC Error (Linux)</span><br><span class="line"></span><br><span class="line">如果运行命令`$ hexo server` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行（即Git Bash）：</span><br></pre></td></tr></table></figure></p>
 <p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">来增加测试时，你可以看见的文件数量。</span><br><span class="line"></span><br><span class="line">#### EMPERM Error (Windows Subsystem for Linux)</span><br><span class="line"></span><br><span class="line">如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</span><br></pre></td></tr></table></figure></p>
-<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
 <p>$ hexo generate<br>$ hexo server -s<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Template render error</span><br><span class="line"></span><br><span class="line">有时运行命令`$ hexo generate` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件`_config.yml`中，比如缩进错误：</span><br><span class="line"></span><br><span class="line">错误例子：</span><br></pre></td></tr></table></figure></p>
 <p>plugins:<br>hexo-generator-feed<br>hexo-generator-sitemap<br><code>`</code></p>
@@ -1042,7 +1042,7 @@ Hello {{ sensitive }}
 </code></pre><p>参数说明：</p>
 <ul>
 <li><p>[layout]</p>
-<p>  |         | 功能                    | 文章路径       |<br>  | ——- | ———————– | ————– |<br>  | <code>post</code>  | 新建博文                | source/_posts  |<br>  | <code>page</code>  | 新建页面（如404，分类） | source         |<br>  | <code>draft</code> | 草稿                    | source/_drafts |</p>
+<p>  | 参数名  | 功能                    | 文章路径       |<br>  | ——- | ———————– | ————– |<br>  | <code>post</code>  | 新建博文                | source/_posts  |<br>  | <code>page</code>  | 新建页面（如404，分类） | source         |<br>  | <code>draft</code> | 草稿                    | source/_drafts |</p>
 <p>  草稿可通过一下命令发布：</p>
 </li>
 </ul>
