@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-11-09T05:42:37.280Z">
+<meta property="og:updated_time" content="2018-11-09T07:04:33.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -399,7 +399,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-09T13:42:37+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-09T15:04:33+08:00">
                 2018-11-09
               </time>
             
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6.2k
+                  6.3k
                 </span>
               
 
@@ -903,11 +903,19 @@
 </table>
 <h5 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h5><p>编辑 主题配置文件 <code>themes/*/_config.yml</code>中的<code>busuanzi_count</code>的配置项即可。</p>
 <ul>
-<li><p>当<code>enable: true</code>时，代表开启全局开关。</p>
-</li>
-<li><p>若<code>site_uv</code>（本站访客数）、<code>site_pv</code>（本站访客数）、<code>page_pv</code>（本文总阅读量）的值均为<code>false</code>时，不蒜子仅作记录而不会在页面上显示。</p>
-</li>
+<li>当<code>enable: true</code>时，代表开启全局开关。</li>
+<li>若<code>site_uv</code>（本站访客数）、<code>site_pv</code>（本站访客数）、<code>page_pv</code>（本文总阅读量）的值均为<code>false</code>时，不蒜子仅作记录而不会在页面上显示。</li>
 </ul>
+<p>注意：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不蒜子官方因七牛强制过期原有的『dn-lbstatics<span class="selector-class">.qbox</span><span class="selector-class">.me</span>』域名（预计<span class="number">2018</span>年<span class="number">10</span>月初），与客服沟通数次无果，即使我提出为此付费也不行，只能更换域名到『busuanzi<span class="selector-class">.ibruce</span><span class="selector-class">.info</span>』！</span><br></pre></td></tr></table></figure>
+<p>解决办法：</p>
+<ol>
+<li><p>找到主题调用不蒜子的swig文件。一般在”\themes*\layout_third-party\analytics\busuanzi-counter.swig”</p>
+</li>
+<li><p>更改域名</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">把原有的：</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">域名改一下即可：</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h5 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h5><ol>
 <li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="noopener">百度统计</a>，定位到站点的代码获取页面</li>
 <li>复制统计脚本 id，如图：<br>​         <img src="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" alt="img">       </li>
@@ -1044,7 +1052,7 @@ Hello {{ sensitive }}
 <p>​<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">#### ENOSPC Error (Linux)</span><br><span class="line"></span><br><span class="line">如果运行命令`$ hexo server` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>Error: watch ENOSPC …<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以通过运行`$ npm dedupe`或者以下命令行（即Git Bash）：</span><br></pre></td></tr></table></figure></p>
 <p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">来增加测试时，你可以看见的文件数量。</span><br><span class="line"></span><br><span class="line">#### EMPERM Error (Windows Subsystem for Linux)</span><br><span class="line"></span><br><span class="line">如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</span><br></pre></td></tr></table></figure></p>
-<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
+<p>Error: watch /path/to/hexo/theme/ EMPERM<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">因为目前在Windows Subsystem <span class="keyword">for</span> Linux中，有些内容更改时，还不能实时更新到hexo服务器。</span><br><span class="line"></span><br><span class="line">所以需要重新编译，再启动服务器：</span><br></pre></td></tr></table></figure></p>
 <p>$ hexo generate<br>$ hexo server -s<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### Template render error</span><br><span class="line"></span><br><span class="line">有时运行命令`$ hexo generate` 返回一个错误:</span><br></pre></td></tr></table></figure></p>
 <p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件`_config.yml`中，比如缩进错误：</span><br><span class="line"></span><br><span class="line">错误例子：</span><br></pre></td></tr></table></figure></p>
 <p>plugins:<br>hexo-generator-feed<br>hexo-generator-sitemap<br><code>`</code></p>
