@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/new_logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="hexo,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="遇见西门" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="工欲善其事，必先利其器。要想搭建博客，必须配置好自己的电脑环境。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo之搭建环境">
+<meta property="og:url" content="https://www.simon96.online/2018/11/10/hexo-env/index.html">
+<meta property="og:site_name" content="遇见西门">
+<meta property="og:description" content="工欲善其事，必先利其器。要想搭建博客，必须配置好自己的电脑环境。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/download-page.jpg">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step1.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step2.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step3.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step4.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step5.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step6.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step7.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step8.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/node-version-test.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step1.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step21.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/03/node-version.png">
+<meta property="og:image" content="https://git-scm.com/figures/18333fig0107-tn.png">
+<meta property="og:updated_time" content="2018-11-10T06:27:16.656Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo之搭建环境">
+<meta name="twitter:description" content="工欲善其事，必先利其器。要想搭建博客，必须配置好自己的电脑环境。">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2014/03/download-page.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: false,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.simon96.online/2018/11/10/hexo-env/">
+
+
+
+
+
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/APP_ID.js","daovoice");</script>
+  <script>
+    daovoice('init', {
+      app_id: "0d7c3293",
+    });
+    daovoice('update');
+  </script>
+
+
+  <title>Hexo之搭建环境 | 遇见西门</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f492d6e24841d067652b886d7cd9eeb5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">遇见西门</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">simon96.online</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-top">
+          <a href="/top/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br>
+            
+            排行
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+	<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9883453800011618",
+	    enable_page_level_ads: true
+	  });
+	</script>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.simon96.online/2018/11/10/hexo-env/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TDsimon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="遇见西门">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Hexo之搭建环境</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-10T14:04:31+08:00">
+                2018-11-10
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-10T14:27:16+08:00">
+                2018-11-10
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/10/hexo-env/" class="leancloud_visitors" data-flag-title="Hexo之搭建环境">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  工欲善其事，必先利其器。要想搭建博客，必须配置好自己的电脑环境。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
+<li>欢迎在文末留言，或者点击加入<a href="https://dwz.cn/Fdk9LftN" target="_blank" rel="noopener">QQ群933583982</a>互相交流。</li>
+<li>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</li>
+</ol>
+<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>然而安装 Hexo 前，您必须安装下列应用程序：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></h3><p>本章节我们将向大家介绍在window和Linux上安装Node.js的方法。 </p>
+<p>本安装教程以Node.js v4.4.3 LTS(长期支持版本)版本为例。</p>
+<p>Node.js安装包及源码下载地址为：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>。  </p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2014/03/download-page.jpg" alt="nodejs_download"></p>
+<p>你可以根据不同平台系统选择你需要的Node.js安装包。</p>
+<p>Node.js 历史版本下载地址：<a href="https://nodejs.org/dist/" target="_blank" rel="noopener">https://nodejs.org/dist/</a></p>
+<p><strong>注意：</strong>Linux上安装Node.js需要安装Python 2.6 或 2.7 ，不建议安装Python 3.0以上版本。</p>
+<hr>
+<h4 id="Window-上安装Node-js"><a href="#Window-上安装Node-js" class="headerlink" title="Window 上安装Node.js"></a>Window 上安装Node.js</h4><p>你可以采用以下两种方式来安装。</p>
+<h5 id="1、Windows-安装包-msi"><a href="#1、Windows-安装包-msi" class="headerlink" title="1、Windows 安装包(.msi)"></a>1、Windows 安装包(.msi)</h5><p>32 位安装包下载地址 : <a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi" target="_blank" rel="noopener">https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi</a></p>
+<p>  64 位安装包下载地址 : <a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi" target="_blank" rel="noopener">https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi</a></p>
+<p> 本文实例以 v0.10.26 版本为例，其他版本类似， 安装步骤：</p>
+<p>  步骤 1 : 双击下载后的安装包 <strong>v0.10.26</strong>，如下所示：</p>
+<p>  <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step1.png" alt="install-node-msi-version-on-windows-step1"> </p>
+<p> 步骤 2 : 点击以上的Run(运行)，将出现如下界面： </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step2.png" alt="install-node-msi-version-on-windows-step2"> </p>
+<p> 步骤 3 : 勾选接受协议选项，点击 next（下一步） 按钮 : </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step3.png" alt="install-node-msi-version-on-windows-step3"> </p>
+<p> 步骤 4 : Node.js默认安装目录为 “C:\Program Files\nodejs\” , 你可以修改目录，并点击 next（下一步）：  </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step4.png" alt="install-node-msi-version-on-windows-step4"> </p>
+<p> 步骤 5 : 点击树形图标来选择你需要的安装模式 , 然后点击下一步 next（下一步） </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step5.png" alt="install-node-msi-version-on-windows-step5"> </p>
+<p> 步骤 6 :点击 Install（安装） 开始安装Node.js。你也可以点击 Back（返回）来修改先前的配置。 然后并点击 next（下一步）： </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step6.png" alt="install-node-msi-version-on-windows-step6"> </p>
+<p> 安装过程： </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step7.png" alt="install-node-msi-version-on-windows-step7"></p>
+<p> 点击 Finish（完成）按钮退出安装向导。 </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step8.png" alt="install-node-msi-version-on-windows-step8"> </p>
+<p>检测PATH环境变量是否配置了Node.js，点击开始=》运行=》输入”cmd” =&gt; 输入命令”path”，输出如下结果：</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PATH=C:<span class="symbol">\o</span>raclexe<span class="symbol">\a</span>pp<span class="symbol">\o</span>racle<span class="symbol">\p</span>roduct<span class="symbol">\1</span>0.2.0<span class="symbol">\s</span>erver<span class="symbol">\b</span>in;C:<span class="symbol">\W</span>indows<span class="symbol">\s</span>ystem32;</span><br><span class="line">C:<span class="symbol">\W</span>indows;C:<span class="symbol">\W</span>indows<span class="symbol">\S</span>ystem32<span class="symbol">\W</span>bem;C:<span class="symbol">\W</span>indows<span class="symbol">\S</span>ystem32<span class="symbol">\W</span>indowsPowerShell<span class="symbol">\v</span>1.0<span class="symbol">\;</span></span><br><span class="line">c:<span class="symbol">\p</span>ython32<span class="symbol">\p</span>ython;C:<span class="symbol">\M</span>inGW<span class="symbol">\b</span>in;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\G</span>TK2-Runtime<span class="symbol">\l</span>ib;</span><br><span class="line">C:<span class="symbol">\P</span>rogram Files<span class="symbol">\M</span>ySQL<span class="symbol">\M</span>ySQL Server 5.5<span class="symbol">\b</span>in;C:<span class="symbol">\P</span>rogram Files<span class="symbol">\n</span>odejs<span class="symbol">\;</span></span><br><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\r</span>g<span class="symbol">\A</span>ppData<span class="symbol">\R</span>oaming<span class="symbol">\n</span>pm</span><br></pre></td></tr></table></figure>
+<p>我们可以看到环境变量中已经包含了C:\Program Files\nodejs\</p>
+<p>检查Node.js版本 </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/node-version-test.png" alt="node-version-test"> </p>
+<h5 id="2、Windows-二进制文件-exe-安装"><a href="#2、Windows-二进制文件-exe-安装" class="headerlink" title="2、Windows 二进制文件 (.exe)安装"></a>2、Windows 二进制文件 (.exe)安装</h5><p>  32 位安装包下载地址 : <a href="http://nodejs.org/dist/v0.10.26/node.exe" target="_blank" rel="noopener">http://nodejs.org/dist/v0.10.26/node.exe</a> </p>
+<p>  64 位安装包下载地址  : <a href="http://nodejs.org/dist/v0.10.26/x64/node.exe" target="_blank" rel="noopener">http://nodejs.org/dist/v0.10.26/x64/node.exe</a> </p>
+<p> <strong>安装步骤</strong> </p>
+<p> 步骤 1 : 双击下载的安装包 Node.exe ，将出现如下界面 : </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step1.png" alt="install-node-exe-on-windows-step1"> </p>
+<p> 点击 Run（运行）按钮将出现命令行窗口： </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step21.png" alt="install-node-exe-on-windows-step21"> </p>
+<h5 id="版本测试"><a href="#版本测试" class="headerlink" title="版本测试"></a>版本测试</h5><p> 进入 node.exe 所在的目录，如下所示： </p>
+<p> <img src="https://www.runoob.com/wp-content/uploads/2014/03/node-version.png" alt="node-version"> </p>
+<p> 如果你获得以上输出结果，说明你已经成功安装了Node.js。</p>
+<hr>
+<h4 id="Linux-上安装-Node-js"><a href="#Linux-上安装-Node-js" class="headerlink" title="Linux 上安装  Node.js"></a>Linux 上安装  Node.js</h4><h5 id="直接使用已编译好的包"><a href="#直接使用已编译好的包" class="headerlink" title="直接使用已编译好的包"></a>直接使用已编译好的包</h5><p>Node 官网已经把  linux 下载版本更改为已编译好的版本了，我们可以直接下载解压后使用：</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># wget https://nodejs.org/dist/v10<span class="meta">.9</span><span class="meta">.0</span>/node-v10<span class="meta">.9</span><span class="meta">.0</span>-linux-x64.tar.xz    // 下载</span><br><span class="line"># tar xf  node-v10<span class="meta">.9</span><span class="meta">.0</span>-linux-x64.tar.xz       // 解压</span><br><span class="line"># cd node-v10<span class="meta">.9</span><span class="meta">.0</span>-linux-x64/                  // 进入解压目录</span><br><span class="line"># ./bin/node -v                               // 执行node命令 查看版本</span><br><span class="line">v10<span class="meta">.9</span><span class="meta">.0</span></span><br></pre></td></tr></table></figure>
+<p>解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以使用 ln 命令来设置软连接：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/npm   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span> </span><br><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/node   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span></span><br></pre></td></tr></table></figure>
+<h5 id="Ubuntu-源码安装-Node-js"><a href="#Ubuntu-源码安装-Node-js" class="headerlink" title="Ubuntu 源码安装 Node.js"></a>Ubuntu 源码安装 Node.js</h5><p> 以下部分我们将介绍在 Ubuntu Linux 下使用源码安装 Node.js 。 其他的 Linux 系统，如 Centos 等类似如下安装步骤。 </p>
+<p> 在 Github 上获取 Node.js 源码：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nodejs/<span class="keyword">node</span>.<span class="title">git</span></span><br><span class="line">Cloning into '<span class="keyword">node</span><span class="title">'...</span></span><br></pre></td></tr></table></figure>
+<p> 修改目录权限：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod -R <span class="number">755</span> <span class="keyword">node</span><span class="title"></span></span><br></pre></td></tr></table></figure>
+<p>使用 <strong>./configure</strong> 创建编译文件，并按照：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> node</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br></pre></td></tr></table></figure>
+<p>查看 node 版本：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">node</span> <span class="title">--version</span></span><br><span class="line">v0.<span class="number">10.25</span></span><br></pre></td></tr></table></figure>
+<h5 id="Ubuntu-apt-get命令安装"><a href="#Ubuntu-apt-get命令安装" class="headerlink" title="Ubuntu apt-get命令安装"></a>Ubuntu apt-get命令安装</h5><p>命令格式如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install nodejs</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> install npm</span><br></pre></td></tr></table></figure>
+<h5 id="CentOS-下源码安装-Node-js"><a href="#CentOS-下源码安装-Node-js" class="headerlink" title="CentOS 下源码安装 Node.js"></a>CentOS 下源码安装 Node.js</h5><p>1、下载源码，你需要在<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>下载最新的Nodejs版本，本文以v0.10.24为例:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/usr/</span>local<span class="regexp">/src/</span></span><br><span class="line">wget http:<span class="regexp">//</span>nodejs.org<span class="regexp">/dist/</span>v0.<span class="number">10.24</span><span class="regexp">/node-v0.10.24.tar.gz</span></span><br></pre></td></tr></table></figure>
+<p>2、解压源码 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf <span class="keyword">node</span><span class="title">-v0</span>.<span class="number">10.24</span>.tar.gz</span><br></pre></td></tr></table></figure>
+<p>3、 编译安装 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="keyword">node</span><span class="title">-v0</span>.<span class="number">10.24</span></span><br><span class="line">./configure --<span class="attr">prefix=</span>/usr/local/<span class="keyword">node</span><span class="title">/0</span>.<span class="number">10.24</span></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>4、 配置NODE_HOME，进入profile编辑环境变量 </p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vim</span> /etc/<span class="keyword">profile</span></span><br></pre></td></tr></table></figure>
+<p> 设置nodejs环境变量，在 <strong>*export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL*</strong> 一行的上面添加如下内容:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#set for nodejs</span></span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">NODE_HOME</span>=/usr/local/node/0.10.24</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$NODE_HOME</span>/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p> :wq保存并退出，编译/etc/profile 使配置生效 </p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span> <span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
+<p> 验证是否安装配置成功 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">-v</span></span><br></pre></td></tr></table></figure>
+<p> 输出 v0.10.24 表示配置成功 </p>
+<p> npm模块安装路径 </p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/node/<span class="number">0.10</span>.<span class="number">24</span>/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span>/</span></span><br></pre></td></tr></table></figure>
+<p><strong>注：</strong>Nodejs 官网提供了编译好的Linux二进制包，你也可以下载下来直接应用。</p>
+<hr>
+<h4 id="Mac-OS-上安装"><a href="#Mac-OS-上安装" class="headerlink" title="Mac OS 上安装"></a>Mac OS 上安装</h4><p> 你可以通过以下两种方式在 Mac OS 上来安装 node：  </p>
+<ul>
+<li></li>
+<li><p>1、在</p>
+<p>官方下载网站</p>
+<p>下载 pkg 安装包，直接点击安装即可。</p>
+</li>
+<li><p>2、使用 brew 命令来安装：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install <span class="keyword">node</span><span class="title"></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="在-Cloud-Studio-中运行-node-js-程序"><a href="#在-Cloud-Studio-中运行-node-js-程序" class="headerlink" title="在 Cloud Studio 中运行 node.js 程序"></a>在 Cloud Studio 中运行 node.js 程序</h4><p><strong>Cloud Studio</strong> 已经为我提供了内置的 Node.js 开发环境，我们不仅可以通过切换运行环境来编写 Node.js 代码，也可以通过 <strong>访问链接</strong> 功能来实时查看代码的运行效果，下面我通过一个例子来展示：</p>
+<ul>
+<li>step1：访问Cloud Studio(<a href="https://studio.dev.tencent.com/" target="_blank" rel="noopener">https://studio.dev.tencent.com/</a>)，注册/登录账户。</li>
+<li>step2：在右侧的运行环境菜单选择：<code>&quot;Node.js&quot;</code> 运行环境</li>
+<li>step3：在左侧代码目录中新建Node.js代码目录编写你的 Node.js 代码</li>
+<li>step4：进入 Node.js 代码目录运行 <code>node hello.js</code> 我们在代码中引入了 <strong>http</strong> 模块，并且通过<code>http.createServer()</code>方法创建了一个 http 服务器，通过<code>listen()</code> 方法绑定了 8888 端口</li>
+<li>step5：点击最右侧的【访问链接】选项卡，在访问链接面板中填写端口号为：8888，点击创建链接，即可点击生成的链接访问我们的 Node.js 项目</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*代码示例*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 发送 HTTP 头部 </span></span><br><span class="line">    <span class="comment">// HTTP 状态值: 200 : OK</span></span><br><span class="line">    <span class="comment">// 内容类型: text/plain</span></span><br><span class="line">    response.writeHead(<span class="number">200</span>, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 发送响应数据 "Hello World"</span></span><br><span class="line">    response.end(<span class="string">"Hello, Universe! I'm running on Cloud Studio!\n"</span>);</span><br><span class="line">&#125;).listen(<span class="number">8888</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 终端打印如下信息</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Server running at http://127.0.0.1:8888/'</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>Tips:</strong> 从终端中输入命令可以看出 <strong>Cloud Studio</strong> 为我们集成了 <strong>Ubuntu16.04.1 + node8.10.0</strong> 的开发环境：</p>
+<p>有任何疑问，可以查阅<a href="https://dev.tencent.com/help/doc/cloud-studio" target="_blank" rel="noopener">帮助文档</a></p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></h3><p>是时候动手尝试下 Git 了，不过得先安装好它。有许多种安装方式，主要分为两种，一种是通过编译源代码来安装；另一种是使用为特定平台预编译好的安装包。</p>
+<h4 id="从源代码安装"><a href="#从源代码安装" class="headerlink" title="从源代码安装"></a>从源代码安装</h4><p>若是条件允许，从源代码安装有很多好处，至少可以安装最新的版本。Git  的每个版本都在不断尝试改进用户体验，所以能通过源代码自己编译安装最新版本就再好不过了。有些 Linux  版本自带的安装包更新起来并不及时，所以除非你在用最新的 distro 或者 backports，那么从源代码安装其实该算是最佳选择。</p>
+<p>Git 的工作需要调用 curl，zlib，openssl，expat，libiconv 等库的代码，所以需要先安装这些依赖工具。在有  yum 的系统上（比如 Fedora）或者有 apt-get 的系统上（比如 Debian 体系），可以用下面的命令安装：</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yum install curl-devel expat-devel gettext-devel \</span><br><span class="line">  openssl-devel zlib-devel</span><br><span class="line"></span><br><span class="line">$ apt-<span class="built_in">get</span> install libcurl4-gnutls-<span class="built_in">dev</span> libexpat1-<span class="built_in">dev</span> gettext \</span><br><span class="line">  libz-<span class="built_in">dev</span> libssl-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<p>之后，从下面的 Git 官方站点下载最新版本源代码：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span><span class="comment">//git-scm.com/download</span></span><br></pre></td></tr></table></figure>
+<p>然后编译并安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> tar -zxf git-1.7.2.2.tar.gz</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> git-1.7.2.2</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make prefix=/usr/<span class="built_in">local</span> all</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make prefix=/usr/<span class="built_in">local</span> install</span></span><br></pre></td></tr></table></figure>
+<p>现在已经可以用 <code>git</code> 命令了，用 <code>git</code> 把 Git 项目仓库克隆到本地，以便日后随时更新：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git:<span class="regexp">//gi</span>t.kernel.org<span class="regexp">/pub/</span>scm<span class="regexp">/git/gi</span>t.git</span><br></pre></td></tr></table></figure>
+<h4 id="在-Linux-上安装"><a href="#在-Linux-上安装" class="headerlink" title="在 Linux 上安装"></a>在 Linux 上安装</h4><p>如果要在 Linux 上安装预编译好的 Git 二进制安装包，可以直接用系统提供的包管理工具。在 Fedora 上用 yum 安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yum install git-core</span></span><br></pre></td></tr></table></figure>
+<p>在 Ubuntu 这类 Debian 体系的系统上，可以用 apt-get 安装：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="builtin-name">get</span> install git</span><br></pre></td></tr></table></figure>
+<h4 id="在-Mac-上安装"><a href="#在-Mac-上安装" class="headerlink" title="在 Mac 上安装"></a>在 Mac 上安装</h4><p>在 Mac 上安装 Git 有两种方式。最容易的当属使用图形化的 Git 安装工具，界面如图 1-7，下载地址在：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>sourceforge.net<span class="regexp">/projects/gi</span>t-osx-installer<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://git-scm.com/figures/18333fig0107-tn.png" alt="img"></p>
+<p> 图 1-7. Git OS X 安装工具</p>
+<p>另一种是通过 MacPorts (<code>http://www.macports.org</code>) 安装。如果已经装好了 MacPorts，用下面的命令安装 Git：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo<span class="built_in"> port </span>install git-core +svn +doc +bash_completion +gitweb</span><br></pre></td></tr></table></figure>
+<p>这种方式就不需要再自己安装依赖库了，Macports 会帮你搞定这些麻烦事。一般上面列出的安装选项已经够用，要是你想用 Git 连接  Subversion 的代码仓库，还可以加上 +svn 选项，具体将在第八章作介绍。（译注：还有一种是使用 homebrew（<code>https://github.com/mxcl/homebrew</code>）：<code>brew install git</code>。）</p>
+<h4 id="在-Windows-上安装"><a href="#在-Windows-上安装" class="headerlink" title="在 Windows 上安装"></a>在 Windows 上安装</h4><p>在 Windows 上安装 Git 同样轻松，有个叫做 msysGit 的项目提供了安装包，可以到 GitHub 的页面上下载 exe 安装文件并运行：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span><span class="comment">//msysgit.github.com/</span></span><br></pre></td></tr></table></figure>
+<p>完成安装之后，就可以使用命令行的 <code>git</code> 工具（已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。</p>
+<p>给 Windows 用户的敬告：你应该在 msysGit 提供的 Unix 风格的 shell 来运行 Git。在 Unix 风格的  shell 中，可以使用本书中提及的复杂多行的命令。对于那些需要在 Windows 命令行中使用 Git  的用户，必须注意：在参数中间有空格的时候，必须使用双引号将参数括起来（在 Linux  中是单引号）；另外，如果扬抑符（^）作为参数的结尾，并且作为这一行的最后一个字符，则这个参数也需要用双引号括起来。因为扬抑符在 Windows  命令行中表示续行（译注：即下一行为这一行命令的继续）。</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>安装Hexo，在命令行（即Git Bash）运行以下命令：</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<p>至此Hexo的环境就搭建好了，下一步</p>
+<ol>
+<li><p>初始化Hexo，在命令行（即Git Bash）依次运行以下命令即可：</p>
+<p>以下<folder>，即存放Hexo初始化文件的路径， 即站点目录。</folder></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &lt;folder&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br></pre></td></tr></table></figure>
+<p>新建完成后，在<folder>路径下，会产生这些文件和文件夹：</folder></p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p><strong>注</strong>：</p>
+<ul>
+<li><p>hexo相关命令均在<strong>站点目录</strong>下，用<strong>Git Bash</strong>运行。</p>
+</li>
+<li><p>站点配置文件：站点目录下的<code>_config.yml</code>。</p>
+<p>​            路径为<code>&lt;folder&gt;\_config.yml</code></p>
+</li>
+<li><p>主题配置文件：站点目录下的<code>themes</code>文件夹下的，主题文件夹下的<code>_config.yml</code>。</p>
+<p>​            路径为<code>&lt;folder&gt;\themes\&lt;主题文件夹&gt;\_config.yml</code></p>
+</li>
+</ul>
+</li>
+<li><p>启动服务器。在<folder>路径下，命令行（即Git Bash）输入以下命令，运行即可：</folder></p>
+<blockquote>
+<p>hexo server</p>
+</blockquote>
+</li>
+<li><p>浏览器访问网址： <code>http://localhost:4000/</code></p>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，您的Hexo博客环境已准备完毕，下一步：本地搭建博客。</p>
+<p><strong>如果本文对您有用，谢谢打赏。</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/TDsimon.png" alt="TDsimon wechat" style="width: 200px; max-width: 100%;">
+    <div>欢迎扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="TDsimon 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="TDsimon 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    TDsimon
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.simon96.online/2018/11/10/hexo-env/" title="Hexo之搭建环境">https://www.simon96.online/2018/11/10/hexo-env/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/18/Typora入门（中文版）/" rel="next" title="Typora入门（中文版）">
+                <i class="fa fa-chevron-left"></i> Typora入门（中文版）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/10/hexo-local-build/" rel="prev" title="Hexo之本地搭建博客">
+                Hexo之本地搭建博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    <div class="post-spread">
+      
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9883453800011618",
+    enable_page_level_ads: true
+  });
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTk3Ni8xNjUwMw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="TDsimon">
+            
+              <p class="site-author-name" itemprop="name">TDsimon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/HE752267091" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:tdsimon96@gmail.com" target="_blank" title="邮箱">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>邮箱</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/simonhe96/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-paperclip"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://dwz.cn/Fdk9LftN" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.smartlion.club/" title="魔镜" target="_blank">魔镜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://cgteamwork.com/" title="CGTeamWork" target="_blank">CGTeamWork</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhuiguang.com/" title="追光动画" target="_blank">追光动画</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.rocen.com.cn/" title="若森数字" target="_blank">若森数字</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备环境"><span class="nav-number">2.</span> <span class="nav-text">准备环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Window-上安装Node-js"><span class="nav-number">2.1.1.</span> <span class="nav-text">Window 上安装Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、Windows-安装包-msi"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">1、Windows 安装包(.msi)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、Windows-二进制文件-exe-安装"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">2、Windows 二进制文件 (.exe)安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#版本测试"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">版本测试</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-上安装-Node-js"><span class="nav-number">2.1.2.</span> <span class="nav-text">Linux 上安装  Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#直接使用已编译好的包"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">直接使用已编译好的包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu-源码安装-Node-js"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">Ubuntu 源码安装 Node.js</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu-apt-get命令安装"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">Ubuntu apt-get命令安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CentOS-下源码安装-Node-js"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">CentOS 下源码安装 Node.js</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS-上安装"><span class="nav-number">2.1.3.</span> <span class="nav-text">Mac OS 上安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-Cloud-Studio-中运行-node-js-程序"><span class="nav-number">2.1.4.</span> <span class="nav-text">在 Cloud Studio 中运行 node.js 程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">2.2.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从源代码安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">从源代码安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-Linux-上安装"><span class="nav-number">2.2.2.</span> <span class="nav-text">在 Linux 上安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-Mac-上安装"><span class="nav-number">2.2.3.</span> <span class="nav-text">在 Mac 上安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-Windows-上安装"><span class="nav-number">2.2.4.</span> <span class="nav-text">在 Windows 上安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TDsimon</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("vjbkhwz3dOF5Bywr4yf61IBS-gzGzoHsz", "3ED9lTeweT6kAOonK8Nbhg40");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin,Evernote";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
