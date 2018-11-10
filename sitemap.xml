@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.simon96.online/2018/11/10/hexo-local-build/</loc>
+    
+    <lastmod>2018-11-10T06:41:56.298Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.simon96.online/2018/10/18/Typora%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%89/</loc>
     
     <lastmod>2018-11-10T06:37:26.534Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://www.simon96.online/2018/09/24/hello-world/</loc>
     
     <lastmod>2018-11-10T06:33:29.597Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.simon96.online/2018/11/10/hexo-local-build/</loc>
-    
-    <lastmod>2018-11-10T06:27:51.518Z</lastmod>
     
   </url>
   
