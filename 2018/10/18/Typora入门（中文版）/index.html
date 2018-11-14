@@ -98,7 +98,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.simon96.online/2018/10/18/Typora入门（中文版）/">
 <meta property="og:image" content="https://www.simon96.online/2018/10/18/Typora入门（中文版）/%22图片标题%22">
-<meta property="og:updated_time" content="2018-11-14T10:51:05.350Z">
+<meta property="og:updated_time" content="2018-11-14T13:57:11.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Typora入门（中文版）">
 <meta name="twitter:description" content="写Markdown费事？Typora让你像写word一样行云流水，所见即所得。">
@@ -339,7 +339,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-14T18:51:05+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-14T21:57:11+08:00">
                 2018-11-14
               </time>
             
@@ -441,44 +441,121 @@
       
 
       
-        <p>[TOC]</p>
-<h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+        <h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
 <li>Typora删除了预览窗口，以及所有其他不必要的干扰。取而代之的是实时预览。Typora<a href="https://www.typora.io/#download" target="_blank" rel="noopener">下载</a>。</li>
 <li>Markdown的语法因不同的解析器或编辑器而异，Typora使用的是<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank" rel="noopener">GitHub Flavored Markdown</a>。</li>
 </ul>
-<iframe height="360" width="640" src="https://www.typora.io/img/beta.mp4" frameborder="0" allowfullscreen><br></iframe><br>### 常用快捷键<br><br>- 加粗： <code>Ctrl/Cmd + B</code><br>- 标题： <code>Ctrl/Cmd + H</code><br>- 插入链接： <code>Ctrl/Cmd + K</code><br>- 插入代码： <code>Ctrl/Cmd + Shift + C</code><br>- 行内代码： <code>Ctrl/Cmd + Shift + K</code><br>- 插入图片： <code>Ctrl/Cmd + Shift + I</code><br>- 无序列表： <code>Ctrl/Cmd + Shift + L</code><br>- 撤销： <code>Ctrl/Cmd + Z</code><br>- 一级标题：快捷键为Crtl + 1，以此类推<br><br>### 块元素<br><br>#### 换行符<br><br>在markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。<br><br>#### 标题级别<br><br>&gt; # 一级标题， 快捷键为Crtl + 1<br>&gt; ## 二级标题，快捷键为Crtl + 2<br>&gt; ###### 六级标题，快捷键为Crtl + 6<br><br>#### 引用文字<br><br>&gt; > + 空格 + 引用文字<br><br>#### 清单<br><br>输入 <em> 列表内容 将创建一个无序列表，该</em>符号可以替换为+或-。<br><br>输入1. 列表内容 将创建一个有序列表，其markdown源代码如下：<br><br>&gt; 无序列表<br>&gt; *   AA<br>&gt; *   BB<br>&gt; *   CC<br>&gt;<br>&gt; 有序列表<br>&gt;<br>&gt; 1. AA<br>&gt; 2. BB<br>&gt; 3. CC<br><br>#### 任务列表<br><br>&gt; - [ ] 不勾选<br>&gt; - [x] 勾选<br><br>#### 代码块<br><br>在Typora中输入””” + 回车，并在后面选择一个语言名称即可语法高亮。<br><br>&gt; 语法高亮:<br>&gt;  \<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="function"><span class="keyword">def</span> <span class="title">helloWorld</span><span class="params">()</span>:</span></span><br><span class="line">&gt; ​	<span class="keyword">print</span> <span class="string">'hello, world'</span></span><br><span class="line">&gt; \</span><br></pre></td></tr></table></figure><br><br>#### 数学表达式<br><br>输入<code>$$</code>，然后按“回车”键，如下：<br>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>$$<br><br>&gt; \$$<br>&gt; \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>&gt; \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>&gt; \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>&gt; \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>&gt; \end{vmatrix}<br>&gt; \$$<br><br>#### 表<br><br>输入`| 表头1 | 表头2 |<code>并回车。即可将创建一个包含两列的表，然后就像操作Word文档一样设置表格即可，没必要知道Markdown的复杂语法，因为这些语法会由Typora自动生成。效果如下：
+<iframe height="360" width="640" src="https://www.typora.io/img/beta.mp4" frameborder="0" allowfullscreen><br></iframe>
 
-| First Header | Second Header |
-| ------------ | ------------- |
-|              |               |
-
-#### 脚注
-
-&gt; 你可以创建一个脚注，像这样\[^1].
-&gt; \[^1]: 这是上面的注释内容。
-
-你可以创建一个脚注，像这样[^1].
-
-[^1]: 这是上面的注释内容。
-
-注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。
-
-#### 分割线
-
-输入</code><strong><em><code>或</code>—<code>再按回车即可绘制一条水平线，如下：
-
-------
-
-#### YAML Front Matter
-
-Typora支持[YAML Front Matter](http://jekyllrb.com/docs/frontmatter/)， 在文章开头输入</code>—<code>，然后按回车即可。
-
-#### 目录（TOC）
-
-输入</code>[toc]`然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。<br><br>### 跨度元素<br><br>跨度元素即图片，网址，视频等，在Typora中输入后，会立即载入并呈现。<br><br>#### 链接<br><br>##### 内部链接<br><br>&gt; 这是一个带有标题属性的[链接](<a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a> “标题”).<br>&gt; 这是一个没有标题属性的[链接](<a href="http://example.net/)" target="_blank" rel="noopener">http://example.net/)</a>.<br><br>效果如下：<br><br>这是一个带有标题属性的<a href="http://example.com/" title="标题" target="_blank" rel="noopener">链接</a>.<br>这是一个没有标题属性的<a href="http://example.net/" target="_blank" rel="noopener">链接</a>.<br><br>##### 参考链接<br><br>&gt; 这是一个[参考链接][id]。<br>&gt; [id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>  “标题”<br><br>这是一个[参考链接][id]。<br><br>[id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>    “标题”<br><br>#### 网址<br><br>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。输入\<a href="mailto:&#x74;&#100;&#95;&#x73;&#x69;&#109;&#111;&#x6e;&#64;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x74;&#100;&#95;&#x73;&#x69;&#109;&#111;&#x6e;&#64;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a> 即 <a href="mailto:&#x74;&#x64;&#x5f;&#x73;&#105;&#109;&#x6f;&#x6e;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x74;&#x64;&#x5f;&#x73;&#105;&#109;&#x6f;&#x6e;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a>。<br>Typora还会自动链接标准网址。例如：<a href="http://www.simon96.online。" target="_blank" rel="noopener">www.simon96.online。</a><br><br>#### 图片<br><br>&gt; ![显示的文字](/path/to/img.jpg)<br>&gt; ![显示的文字](/path/to/img.jpg “图片标题”)<br><br><img src="/2018/10/18/Typora入门（中文版）/" alt="显示的文字"><br><img src="/2018/10/18/Typora入门（中文版）/&quot;图片标题&quot;" alt="显示的文字"><br><br>#### 倾斜<br><br>&gt; \</em>单个星号<em><br>&gt; _单下划线_<br><br>效果如下：
-</em>单个星号<em><br><br><em>单下划线</em><br><br>#### 加粗<br><br>&gt; \</em>两个星号*<br>&gt; _双下划线_<br><br>效果如下：
-</strong>两个星号**<br><strong>双下划线</strong><br><br>#### 代码标记<br><br>标记代码使用反引号，即在英文输入法下，ESC键下面和1键左边的符号——`<br><br>使用该`printf()`功能。<br>效果如下：<br>使用该<code>printf()</code>功能。<br><br>#### 删除线<br><br>&gt; ~~删除线~~<br><br>效果如下：<br><br> <del>删除线</del><br><br>#### 下划线<br><br>\<u>下划线</u><br><br>效果如下：<br><br><u>下划线</u><br><br>#### 表情符号:smile:<br><br>&gt; ：smile ：​（注意为：是英文的冒号）<br><br>:smile:<br><br>#### 下标<br><br>H~2~O (需在设置中打开该功能)<br><br>#### 上标<br><br>X^2^(需在设置中打开该功能)<br><br>#### 高亮<br><br> ==高亮==(需在设置中打开该功能)<br><br>### HTML<br><br>支持HTML<br><br>#### 嵌入内容<br><br>支持iframe-based嵌入代码，<br><br>&gt;  &lt; iframe height=’265’ scrolling=’no’ title=’Fancy Animated SVG Menu’ src=’<a href="http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39;" target="_blank" rel="noopener">http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39;</a> frameborder=’no’ allowtransparency=’true’ allowfullscreen=’true’ style=’width: 100%;’&gt;
-
+<h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul>
+<li>加粗： <code>Ctrl/Cmd + B</code></li>
+<li>标题： <code>Ctrl/Cmd + H</code></li>
+<li>插入链接： <code>Ctrl/Cmd + K</code></li>
+<li>插入代码： <code>Ctrl/Cmd + Shift + C</code></li>
+<li>行内代码： <code>Ctrl/Cmd + Shift + K</code></li>
+<li>插入图片： <code>Ctrl/Cmd + Shift + I</code></li>
+<li>无序列表： <code>Ctrl/Cmd + Shift + L</code></li>
+<li>撤销： <code>Ctrl/Cmd + Z</code></li>
+<li>一级标题：快捷键为Crtl + 1，以此类推</li>
+</ul>
+<h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3><h4 id="换行符"><a href="#换行符" class="headerlink" title="换行符"></a>换行符</h4><p>在markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。</p>
+<h4 id="标题级别"><a href="#标题级别" class="headerlink" title="标题级别"></a>标题级别</h4><blockquote>
+<p># 一级标题， 快捷键为Crtl + 1<br>## 二级标题，快捷键为Crtl + 2<br>###### 六级标题，快捷键为Crtl + 6</p>
+</blockquote>
+<h4 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h4><blockquote>
+<p>> + 空格 + 引用文字</p>
+</blockquote>
+<h4 id="清单"><a href="#清单" class="headerlink" title="清单"></a>清单</h4><p>输入 <em> 列表内容 将创建一个无序列表，该</em>符号可以替换为+或-。</p>
+<p>输入1. 列表内容 将创建一个有序列表，其markdown源代码如下：</p>
+<blockquote>
+<p>无序列表<br>*   AA<br>*   BB<br>*   CC</p>
+<p>有序列表</p>
+<ol>
+<li>AA</li>
+<li>BB</li>
+<li>CC</li>
+</ol>
+</blockquote>
+<h4 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h4><blockquote>
+<p>- [ ] 不勾选<br>- [x] 勾选</p>
+</blockquote>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>在Typora中输入””” + 回车，并在后面选择一个语言名称即可语法高亮。</p>
+<blockquote>
+<p>语法高亮:<br> \<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="function"><span class="keyword">def</span> <span class="title">helloWorld</span><span class="params">()</span>:</span></span><br><span class="line">&gt; ​	<span class="keyword">print</span> <span class="string">'hello, world'</span></span><br><span class="line">&gt; \</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h4><p>输入<code>$$</code>，然后按“回车”键，如下：<br>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>$$</p>
+<blockquote>
+<p>\$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>\$$</p>
+</blockquote>
+<h4 id="表"><a href="#表" class="headerlink" title="表"></a>表</h4><p>输入`| 表头1 | 表头2 |`并回车。即可将创建一个包含两列的表，然后就像操作Word文档一样设置表格即可，没必要知道Markdown的复杂语法，因为这些语法会由Typora自动生成。效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h4><blockquote>
+<p>你可以创建一个脚注，像这样[^1].<br>[^1]: 这是上面的注释内容。</p>
+</blockquote>
+<p>你可以创建一个脚注，像这样<a href="这是上面的注释内容。">^1</a>.</p>
+<p>注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。</p>
+<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><p>输入<code>***</code>或<code>---</code> 再按回车即可绘制一条水平线，如下：</p>
+<hr>
+<h4 id="YAML-Front-Matter"><a href="#YAML-Front-Matter" class="headerlink" title="YAML Front Matter"></a>YAML Front Matter</h4><p>Typora支持<a href="http://jekyllrb.com/docs/frontmatter/" target="_blank" rel="noopener">YAML Front Matter</a>， 在文章开头输入<code>---</code>，然后按回车即可。</p>
+<h4 id="目录（TOC）"><a href="#目录（TOC）" class="headerlink" title="目录（TOC）"></a>目录（TOC）</h4><p>输入<code>[toc]</code>然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。</p>
+<h3 id="跨度元素"><a href="#跨度元素" class="headerlink" title="跨度元素"></a>跨度元素</h3><p>跨度元素即图片，网址，视频等，在Typora中输入后，会立即载入并呈现。</p>
+<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><h5 id="内部链接"><a href="#内部链接" class="headerlink" title="内部链接"></a>内部链接</h5><blockquote>
+<p>这是一个带有标题属性的[链接](<a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a> “标题”).<br>这是一个没有标题属性的[链接](<a href="http://example.net/)" target="_blank" rel="noopener">http://example.net/)</a>.</p>
+</blockquote>
+<p>效果如下：</p>
+<p>这是一个带有标题属性的<a href="http://example.com/" title="标题" target="_blank" rel="noopener">链接</a>.<br>这是一个没有标题属性的<a href="http://example.net/" target="_blank" rel="noopener">链接</a>.</p>
+<h5 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h5><blockquote>
+<p>这是一个[参考链接]<a href="http://example.com/" title="标题" target="_blank" rel="noopener">id</a>。<br>[id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>  “标题”</p>
+</blockquote>
+<p>这是一个<a href="http://example.com/" title="标题" target="_blank" rel="noopener">参考链接</a>。</p>
+<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。输入\<a href="mailto:&#116;&#100;&#95;&#x73;&#x69;&#109;&#111;&#110;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener">&#116;&#100;&#95;&#x73;&#x69;&#109;&#111;&#110;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a> 即 <a href="mailto:&#116;&#x64;&#x5f;&#x73;&#105;&#x6d;&#x6f;&#x6e;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#116;&#x64;&#x5f;&#x73;&#105;&#x6d;&#x6f;&#x6e;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;</a>。<br>Typora还会自动链接标准网址。例如：<a href="http://www.simon96.online。" target="_blank" rel="noopener">www.simon96.online。</a></p>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><blockquote>
+<p>![显示的文字](/path/to/img.jpg)<br>![显示的文字](/path/to/img.jpg “图片标题”)</p>
+</blockquote>
+<p><img src="/2018/10/18/Typora入门（中文版）/" alt="显示的文字"><br><img src="/2018/10/18/Typora入门（中文版）/&quot;图片标题&quot;" alt="显示的文字"></p>
+<h4 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h4><blockquote>
+<p>*单个星号*<br>_单下划线_</p>
+</blockquote>
+<p>效果如下：<br><em>单个星号</em></p>
+<p><em>单下划线</em></p>
+<h4 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h4><blockquote>
+<p>*两个星号*<br>_双下划线_</p>
+</blockquote>
+<p>效果如下：<br><strong>两个星号</strong><br><strong>双下划线</strong></p>
+<h4 id="代码标记"><a href="#代码标记" class="headerlink" title="代码标记"></a>代码标记</h4><p>标记代码使用反引号，即在英文输入法下，ESC键下面和1键左边的符号——` </p>
+<p>使用该`printf()`功能。<br>效果如下：<br>使用该<code>printf()</code>功能。</p>
+<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><blockquote>
+<p>~~删除线~~</p>
+</blockquote>
+<p>效果如下：</p>
+<p> <del>删除线</del></p>
+<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><p>\<u>下划线</u></p>
+<p>效果如下：</p>
+<p><u>下划线</u></p>
+<h4 id="表情符号-smile"><a href="#表情符号-smile" class="headerlink" title="表情符号:smile:"></a>表情符号:smile:</h4><blockquote>
+<p>：smile ：​（注意为：是英文的冒号）</p>
+</blockquote>
+<p>:smile:</p>
+<h4 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h4><p>H~2~O (需在设置中打开该功能)</p>
+<h4 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h4><p>X^2^(需在设置中打开该功能)</p>
+<h4 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h4><p> ==高亮==(需在设置中打开该功能)</p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>支持HTML</p>
+<h4 id="嵌入内容"><a href="#嵌入内容" class="headerlink" title="嵌入内容"></a>嵌入内容</h4><p>支持iframe-based嵌入代码， </p>
+<blockquote>
+<p> &lt; iframe height=’265’ scrolling=’no’ title=’Fancy Animated SVG Menu’ src=’<a href="http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39;" target="_blank" rel="noopener">http://codepen.io/jeangontijo/embed/OxVywj/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2&#39;</a> frameborder=’no’ allowtransparency=’true’ allowfullscreen=’true’ style=’width: 100%;’&gt;</p>
+</blockquote>
 <h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><blockquote>
 <p>&lt; video src=”xxx.mp4” /&gt;</p>
 </blockquote>
@@ -847,7 +924,7 @@ Typora支持[YAML Front Matter](http://jekyllrb.com/docs/frontmatter/)， 在文
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.</span> <span class="nav-text">Typora</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#视频"><span class="nav-number">1.1.1.</span> <span class="nav-text">视频</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢支持"><span class="nav-number">2.</span> <span class="nav-text">感谢支持</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.</span> <span class="nav-text">Typora</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用快捷键"><span class="nav-number">1.2.</span> <span class="nav-text">常用快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块元素"><span class="nav-number">1.3.</span> <span class="nav-text">块元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#换行符"><span class="nav-number">1.3.1.</span> <span class="nav-text">换行符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标题级别"><span class="nav-number">1.3.2.</span> <span class="nav-text">标题级别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用文字"><span class="nav-number">1.3.3.</span> <span class="nav-text">引用文字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清单"><span class="nav-number">1.3.4.</span> <span class="nav-text">清单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#任务列表"><span class="nav-number">1.3.5.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码块"><span class="nav-number">1.3.6.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学表达式"><span class="nav-number">1.3.7.</span> <span class="nav-text">数学表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表"><span class="nav-number">1.3.8.</span> <span class="nav-text">表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#脚注"><span class="nav-number">1.3.9.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分割线"><span class="nav-number">1.3.10.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#YAML-Front-Matter"><span class="nav-number">1.3.11.</span> <span class="nav-text">YAML Front Matter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录（TOC）"><span class="nav-number">1.3.12.</span> <span class="nav-text">目录（TOC）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨度元素"><span class="nav-number">1.4.</span> <span class="nav-text">跨度元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链接"><span class="nav-number">1.4.1.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#内部链接"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">内部链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考链接"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">参考链接</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网址"><span class="nav-number">1.4.2.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图片"><span class="nav-number">1.4.3.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#倾斜"><span class="nav-number">1.4.4.</span> <span class="nav-text">倾斜</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加粗"><span class="nav-number">1.4.5.</span> <span class="nav-text">加粗</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码标记"><span class="nav-number">1.4.6.</span> <span class="nav-text">代码标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除线"><span class="nav-number">1.4.7.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下划线"><span class="nav-number">1.4.8.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表情符号-smile"><span class="nav-number">1.4.9.</span> <span class="nav-text">表情符号:smile:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下标"><span class="nav-number">1.4.10.</span> <span class="nav-text">下标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上标"><span class="nav-number">1.4.11.</span> <span class="nav-text">上标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高亮"><span class="nav-number">1.4.12.</span> <span class="nav-text">高亮</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.5.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌入内容"><span class="nav-number">1.5.1.</span> <span class="nav-text">嵌入内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频"><span class="nav-number">1.5.2.</span> <span class="nav-text">视频</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感谢支持"><span class="nav-number">2.</span> <span class="nav-text">感谢支持</span></a></li></ol></div>
             
 
           </div>
