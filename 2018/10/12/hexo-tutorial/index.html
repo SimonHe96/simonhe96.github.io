@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://huaji8.top/img/live2d/tororo.gif">
 <meta property="og:image" content="https://huaji8.top/img/live2d/hijiki.gif">
 <meta property="og:image" content="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2018-11-16T11:19:03.922Z">
+<meta property="og:updated_time" content="2018-11-16T11:38:23.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析">
 <meta name="twitter:description" content="如果你和我一样是小白，那么恭喜你！看完这篇文章，你也可以拥有一个这样的博客啦！">
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-16T19:19:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-16T19:38:23+08:00">
                 2018-11-16
               </time>
             
@@ -647,6 +647,7 @@
 <li><a href="https://github.com/tangkunyin/hexo-theme-jsimple#jsimple" target="_blank" rel="noopener">JSimple</a></li>
 <li><a href="https://github.com/chaooo/hexo-theme-BlueLake#bluelake" target="_blank" rel="noopener">BlueLake</a></li>
 </ol>
+<p>详见：<a href="https://github.com/search?q=hexo-theme" target="_blank" rel="noopener">https://github.com/search?q=hexo-theme</a></p>
 <h4 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h4><ol>
 <li>下载主题</li>
 <li>将下载好的主题文件夹，粘贴到站点目录的<code>themes</code>下。</li>
@@ -698,7 +699,8 @@
 <p>其中字体文件在 <code>themes/next/source/fonts</code> 目录下，里面有个 <code>.gitkeep</code> 的隐藏文件，打开写入你要保留的字体文件，比如我的是就是写入 <code>Zitiming.ttf</code> ，具体字库自己从网上下载即可。</p>
 <h5 id="修改内容区域的宽度"><a href="#修改内容区域的宽度" class="headerlink" title="修改内容区域的宽度"></a>修改内容区域的宽度</h5><p>编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 修改成你期望的宽度</span><br><span class="line">$content-desktop = 700px</span><br><span class="line"></span><br><span class="line">// 当视窗超过 1600px 后的宽度</span><br><span class="line">$content-desktop-large = 900px</span><br></pre></td></tr></table></figure>
-<h5 id="网站标题栏背景颜色"><a href="#网站标题栏背景颜色" class="headerlink" title="网站标题栏背景颜色"></a>网站标题栏背景颜色</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background: $blue; //修改为自己喜欢的颜色</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="网站标题栏背景颜色"><a href="#网站标题栏背景颜色" class="headerlink" title="网站标题栏背景颜色"></a>网站标题栏背景颜色</h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,在里面写下如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.site-meta &#123;</span><br><span class="line">  background: $blue; //修改为自己喜欢的颜色</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,在里面写下如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 鼠标样式</span><br><span class="line">  * &#123;</span><br><span class="line">      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword2.ico&quot;),auto!important</span><br><span class="line">  &#125;</span><br><span class="line">  :active &#123;</span><br><span class="line">      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword1.ico&quot;),auto!important</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <h5 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h5><p>打开 <code>themes/*/layout/_partials/head.swig</code>文件,在 <code></code> 之前插入代码：</p>
@@ -1505,7 +1507,7 @@ Hello {{ sensitive }}
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -1,6 +1,10 @@
-https://www.simon96.online/2018/11/10/hexo-local-build/
-https://www.simon96.online/2018/11/10/hexo-env/
-https://www.simon96.online/2018/10/18/Typora入门（中文版）/
-https://www.simon96.online/2018/10/12/hexo-tutorial/
-https://www.simon96.online/2018/09/30/Typora-tutorial-English-edition/
-https://www.simon96.online/2018/09/24/hello-world/
+https://www.simon96.online/2018/11/16/hexo-do-live2d/
+https://www.simon96.online/2018/11/16/hexo-do-ad/
+https://www.simon96.online/2018/11/16/hexo-do-categories/
+https://www.simon96.online/2018/11/16/hexo-do-process/
+https://www.simon96.online/2018/11/16/hexo-do-shadow/
+https://www.simon96.online/2018/11/16/hexo-do-forkMe/
+https://www.simon96.online/2018/11/16/hexo-do-url/
+https://www.simon96.online/2018/11/16/hexo-do-top/
+https://www.simon96.online/2018/11/16/hexo-do-gulp/
+https://www.simon96.online/2018/11/16/hexo-do-heart/
