@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/new_logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="hexo,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="遇见西门" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="错误分析如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。 YAML Parsing Error12JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: Last updated: %s  参数中包含冒号，请用加引号，如Last">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo之错误分析">
+<meta property="og:url" content="https://www.simon96.online/2018/11/16/hexo-do-error/index.html">
+<meta property="og:site_name" content="遇见西门">
+<meta property="og:description" content="错误分析如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。 YAML Parsing Error12JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: Last updated: %s  参数中包含冒号，请用加引号，如Last">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-16T12:05:14.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo之错误分析">
+<meta name="twitter:description" content="错误分析如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。 YAML Parsing Error12JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: Last updated: %s  参数中包含冒号，请用加引号，如Last">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: false,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.simon96.online/2018/11/16/hexo-do-error/">
+
+
+
+
+
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/APP_ID.js","daovoice");</script>
+  <script>
+    daovoice('init', {
+      app_id: "0d7c3293",
+    });
+    daovoice('update');
+  </script>
+
+
+  <title>Hexo之错误分析 | 遇见西门</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f492d6e24841d067652b886d7cd9eeb5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">遇见西门</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">simon96.online</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+	<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9883453800011618",
+	    enable_page_level_ads: true
+	  });
+	</script>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.simon96.online/2018/11/16/hexo-do-error/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TDsimon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="遇见西门">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Hexo之错误分析</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T20:04:28+08:00">
+                2018-11-16
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-16T20:05:14+08:00">
+                2018-11-16
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/16/hexo-do-error/" class="leancloud_visitors" data-flag-title="Hexo之错误分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h3><p>如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。</p>
+<h4 id="YAML-Parsing-Error"><a href="#YAML-Parsing-Error" class="headerlink" title="YAML Parsing Error"></a>YAML Parsing Error</h4><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: incomplete <span class="built_in">explicit</span> mapping pair; a <span class="built_in">key</span> node <span class="built_in">is</span> missed <span class="built_in">at</span> line <span class="number">18</span>, column <span class="number">29</span>:</span><br><span class="line">      last_updated: Last updated: <span class="built_in">%s</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>参数中包含冒号，请用加引号，如<code>Last updated: %s</code></li>
+</ol>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JS-YAML: bad indentation <span class="keyword">of</span> <span class="keyword">a</span> mapping entry <span class="keyword">at</span> <span class="built_in">line</span> <span class="number">18</span>, column <span class="number">31</span>:</span><br><span class="line">      last_updated：<span class="string">"Last updated: %s"</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>字段后面的冒号必须为<strong>英文冒号</strong>，如：last_updated:</li>
+<li>字段冒号后面必须跟一个空格，如：last_updated: “Last updated: %s”</li>
+</ol>
+<h4 id="EMFILE-Error"><a href="#EMFILE-Error" class="headerlink" title="EMFILE Error"></a>EMFILE Error</h4><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>EMFILE, too many open files</span><br></pre></td></tr></table></figure>
+<p>生成大量的文件时，可能遇到EMFILE错误。</p>
+<p>可以运行以下命令来增加允许同步I / O操作的数量。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">ulimit</span> -n 10000</span></span><br></pre></td></tr></table></figure>
+<h4 id="Process-Out-of-Memory"><a href="#Process-Out-of-Memory" class="headerlink" title="Process Out of Memory"></a>Process Out of Memory</h4><p>当<code>hexo g</code>时，遇到以下错误：</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FATAL <span class="literal">ERROR</span>: CALL_AND_RETRY_LAST Allocation failed - <span class="keyword">process</span> <span class="keyword">out</span> <span class="keyword">of</span> memory</span><br></pre></td></tr></table></figure>
+<p>如下，更改<code>hexo-cli</code>文件的第一行，来增大nodejs堆内存.该bug已在<a href="https://github.com/hexojs/hexo/issues/1735" target="_blank" rel="noopener">新版本</a>修复。</p>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node --max_old_space_size=8192</span></span><br></pre></td></tr></table></figure>
+<h4 id="Git-Deployment-Problems"><a href="#Git-Deployment-Problems" class="headerlink" title="Git Deployment Problems"></a>Git Deployment Problems</h4><ol>
+<li>RPC failed</li>
+</ol>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error: </span>RPC failed; result=22, HTTP code = 403</span><br><span class="line"></span><br><span class="line">fatal: 'username.github.io' does not appear to be a git repository</span><br></pre></td></tr></table></figure>
+<p>确保你有你的电脑上设置git正确或尝试使用HTTPS存储库URL。</p>
+<ol>
+<li>Error: ENOENT: no such file or directory</li>
+</ol>
+<p>这个需要有一定的git的知识，因为可能是由于写错了标签,类别,或文件名，导致本地和github冲突了，Git不能自动合并这一变化所以它打破了自动分支。</p>
+<p>解决办法：</p>
+<ol>
+<li>检查文章的标签和类别,确保本地和github上是相同的。</li>
+<li>合并分支（Commit）。</li>
+<li>清除，重构。在站点目录下，命令行（即Git Bash）运行<code>hexo clean</code>和<code>hexo g</code></li>
+<li>手动将站点目录下的<code>public</code>文件夹复制到您的桌面</li>
+<li>从你的master分支切换到部署在本地分支。</li>
+<li>从桌面复制<code>public</code>文件夹到本地分支。</li>
+<li>合并分支到github（Commit）。</li>
+<li>切回master分支。</li>
+</ol>
+<h4 id="Server-Problems"><a href="#Server-Problems" class="headerlink" title="Server Problems"></a>Server Problems</h4><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>listen EADDRINUSE</span><br></pre></td></tr></table></figure>
+<p>你可能使用相同的端口，同时开启了两个Hexo服务器。如果需要同时开启，可以尝试修改端口设置：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo<span class="built_in"> server </span>-p 5000</span><br></pre></td></tr></table></figure>
+<h4 id="Plugin-Installation-Problems"><a href="#Plugin-Installation-Problems" class="headerlink" title="Plugin Installation Problems"></a>Plugin Installation Problems</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! <span class="keyword">node</span><span class="title">-waf</span> configure build</span><br></pre></td></tr></table></figure>
+<p>这个错误可能发生在试图安装一个用Cc++或另一个javascript语言编写的插件。确保您已经安装了正确的编译器在您的计算机上。</p>
+<h4 id="Error-with-DTrace-Mac-OS-X"><a href="#Error-with-DTrace-Mac-OS-X" class="headerlink" title="Error with DTrace (Mac OS X)"></a>Error with DTrace (Mac OS X)</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line">&#123; [Error: Cannot <span class="built_in">find</span> <span class="keyword">module</span> <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>DTrace安装可能有问题，重装:</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install hexo --<span class="literal">no</span>-optional</span><br></pre></td></tr></table></figure>
+<p>详见 <a href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796" target="_blank" rel="noopener">#1326</a></p>
+<h4 id="Iterate-Data-Model-on-Jade-or-Swig"><a href="#Iterate-Data-Model-on-Jade-or-Swig" class="headerlink" title="Iterate Data Model on Jade or Swig"></a>Iterate Data Model on Jade or Swig</h4><p>Hexo使用仓库的数据模型。这不是一个数组,所以你可能需要将对象转换为iterable。</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> post <span class="keyword">in</span> site.posts.toArray() %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
+<h4 id="Data-Not-Updated"><a href="#Data-Not-Updated" class="headerlink" title="Data Not Updated"></a>Data Not Updated</h4><p>一些数据不能更新或新生成的文件的最后一个版本完全相同。清理缓存，再试一次：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
+<h4 id="No-command-is-executed"><a href="#No-command-is-executed" class="headerlink" title="No command is executed"></a>No command is executed</h4><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行（即Git Bash）时,  有可能时站点目录下的  <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.2.2"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Escape-Contents"><a href="#Escape-Contents" class="headerlink" title="Escape Contents"></a>Escape Contents</h4><p>Hexo使用Nunjucks渲染的页面. <code>{ { } }</code>或<code>{ % % }</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
+
+Hello {{ sensitive }}
+
+<p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h4 id="ENOSPC-Error-Linux"><a href="#ENOSPC-Error-Linux" class="headerlink" title="ENOSPC Error (Linux)"></a>ENOSPC Error (Linux)</h4><p>如果运行命令<code>$ hexo server</code> 返回一个错误: </p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch ENOSPC ...</span><br></pre></td></tr></table></figure>
+<p>可以通过运行<code>$ npm dedupe</code>或者以下命令行（即Git Bash）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span></span><br></pre></td></tr></table></figure>
+<p>来增加测试时，你可以看见的文件数量。</p>
+<h4 id="EMPERM-Error-Windows-Subsystem-for-Linux"><a href="#EMPERM-Error-Windows-Subsystem-for-Linux" class="headerlink" title="EMPERM Error (Windows Subsystem for Linux)"></a>EMPERM Error (Windows Subsystem for Linux)</h4><p>如果在Windows Subsystem for Linux，运行命令<code>$ hexo server</code> 返回这个错误: </p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error: </span>watch /path/to/hexo/theme/ EMPERM</span><br></pre></td></tr></table></figure>
+<p>因为目前在Windows Subsystem for Linux中，有些内容更改时，还不能实时更新到hexo服务器。</p>
+<p>所以需要重新编译，再启动服务器：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo<span class="built_in"> server </span>-s</span><br></pre></td></tr></table></figure>
+<h4 id="Template-render-error"><a href="#Template-render-error" class="headerlink" title="Template render error"></a>Template render error</h4><p>有时运行命令<code>$ hexo generate</code> 返回一个错误: </p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FATAL Something<span class="comment">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span></span><br><span class="line">Template render <span class="keyword">error</span>: (unknown path)</span><br></pre></td></tr></table></figure>
+<p>这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件<code>_config.yml</code>中，比如缩进错误：</p>
+<p>错误例子：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">plugins:</span></span><br><span class="line">hexo-generator-feed</span><br><span class="line">hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<p>### </p>
+<p><strong>如果本文对您有用，谢谢打赏。</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/TDsimon.png" alt="TDsimon wechat" style="width: 200px; max-width: 100%;">
+    <div>欢迎扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="TDsimon 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="TDsimon 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    TDsimon
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.simon96.online/2018/11/16/hexo-do-error/" title="Hexo之错误分析">https://www.simon96.online/2018/11/16/hexo-do-error/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/16/hexo-do-search/" rel="next" title="Hexo之搜索服务">
+                <i class="fa fa-chevron-left"></i> Hexo之搜索服务
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/16/hexo-do-operating/" rel="prev" title="Hexo之常用操作">
+                Hexo之常用操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    <div class="post-spread">
+      
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9883453800011618",
+    enable_page_level_ads: true
+  });
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTk3Ni8xNjUwMw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="TDsimon">
+            
+              <p class="site-author-name" itemprop="name">TDsimon</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/HE752267091" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:tdsimon96@gmail.com" target="_blank" title="邮箱">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>邮箱</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/simonhe96/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-paperclip"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://dwz.cn/Fdk9LftN" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.smartlion.club/" title="魔镜" target="_blank">魔镜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://cgteamwork.com/" title="CGTeamWork" target="_blank">CGTeamWork</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhuiguang.com/" title="追光动画" target="_blank">追光动画</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.rocen.com.cn/" title="若森数字" target="_blank">若森数字</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#错误分析"><span class="nav-number">1.</span> <span class="nav-text">错误分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#YAML-Parsing-Error"><span class="nav-number">1.1.</span> <span class="nav-text">YAML Parsing Error</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EMFILE-Error"><span class="nav-number">1.2.</span> <span class="nav-text">EMFILE Error</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Process-Out-of-Memory"><span class="nav-number">1.3.</span> <span class="nav-text">Process Out of Memory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-Deployment-Problems"><span class="nav-number">1.4.</span> <span class="nav-text">Git Deployment Problems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Server-Problems"><span class="nav-number">1.5.</span> <span class="nav-text">Server Problems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plugin-Installation-Problems"><span class="nav-number">1.6.</span> <span class="nav-text">Plugin Installation Problems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-with-DTrace-Mac-OS-X"><span class="nav-number">1.7.</span> <span class="nav-text">Error with DTrace (Mac OS X)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iterate-Data-Model-on-Jade-or-Swig"><span class="nav-number">1.8.</span> <span class="nav-text">Iterate Data Model on Jade or Swig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-Not-Updated"><span class="nav-number">1.9.</span> <span class="nav-text">Data Not Updated</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-command-is-executed"><span class="nav-number">1.10.</span> <span class="nav-text">No command is executed</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Escape-Contents"><span class="nav-number">1.11.</span> <span class="nav-text">Escape Contents</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ENOSPC-Error-Linux"><span class="nav-number">1.12.</span> <span class="nav-text">ENOSPC Error (Linux)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EMPERM-Error-Windows-Subsystem-for-Linux"><span class="nav-number">1.13.</span> <span class="nav-text">EMPERM Error (Windows Subsystem for Linux)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Template-render-error"><span class="nav-number">1.14.</span> <span class="nav-text">Template render error</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TDsimon</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("vjbkhwz3dOF5Bywr4yf61IBS-gzGzoHsz", "3ED9lTeweT6kAOonK8Nbhg40");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,GooglePlus,Linkedin,Evernote";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
