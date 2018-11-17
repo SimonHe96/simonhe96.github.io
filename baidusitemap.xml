@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.simon96.online/2018/10/12/hexo-tutorial/</loc>
+    <lastmod>2018-11-17T03:17:50.404Z</lastmod>
+  </url>  <url>
     <loc>https://www.simon96.online/2018/11/16/hexo-do-operating/</loc>
     <lastmod>2018-11-16T12:06:56.785Z</lastmod>
   </url>  <url>
@@ -66,9 +69,6 @@
   </url>  <url>
     <loc>https://www.simon96.online/2018/11/16/hexo-do-ad/</loc>
     <lastmod>2018-11-16T11:56:08.942Z</lastmod>
-  </url>  <url>
-    <loc>https://www.simon96.online/2018/10/12/hexo-tutorial/</loc>
-    <lastmod>2018-11-16T11:38:23.667Z</lastmod>
   </url>  <url>
     <loc>https://www.simon96.online/2018/11/10/hexo-local-build/</loc>
     <lastmod>2018-11-16T11:32:48.369Z</lastmod>
